@@ -10,6 +10,8 @@
 </template>
 
 <script>
+/* eslint no-console: ["error", { allow: ["warn", "error"] }] */
+
 export default {
   asyncData(context) {
     // // This what would we do in real project
