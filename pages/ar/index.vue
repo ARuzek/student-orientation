@@ -11,17 +11,6 @@
 
 <script>
 export default {
-  async fetch(context) {
-    // Loading reference data - Articles in our case
-    if (context.store.state.articles.loaded !== '1') {
-      const articlesRefRes = await context.app.$storyapi.get(`cdn/stories/`, {
-        starts_with: 'de/articles/',
-        version: 'draft',
-      })
-      context.store.commit('articles/setArticles', articlesRefRes.data.stories)
-      context.store.commit('articles/setLoaded', '1')
-    }
-  },
   asyncData(context) {
     // // This what would we do in real project
     // const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
@@ -29,7 +18,7 @@ export default {
 
     // Load the JSON from the API - loadig the home content (index page)
     return context.app.$storyapi
-      .get('cdn/stories/de/home', {
+      .get('cdn/stories/ar/home', {
         version: 'draft',
       })
       .then((res) => {
