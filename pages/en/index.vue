@@ -20,7 +20,7 @@ export default {
 
     // Load the JSON from the API - loadig the home content (index page)
     return context.app.$storyapi
-      .get('cdn/stories/ar/home', {
+      .get('cdn/stories/en/welcome', {
         version: 'draft',
       })
       .then((res) => {
