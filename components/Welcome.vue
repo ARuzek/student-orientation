@@ -7,7 +7,10 @@
 </template>
 
 <script>
-import 'vrview/build/vrview'
+if (process.client) {
+  require('../plugins/vrview.min.js')
+  window.addEventListener('load', this.onVrViewLoad())
+}
 export default {
   props: {
     blok: {
@@ -15,18 +18,15 @@ export default {
       required: true,
     },
   },
-  mounted() {
-    this.onVrViewLoad()
-  },
   methods: {
     onVrViewLoad() {
       // Selector '#vrview' finds element with id 'vrview'.
       // eslint-disable-next-line no-undef
-      const vrview = new VRView.Player('#vrview', {
+      const vrView = new VRView.Player('#vrview', {
         image: this.block.vrImage.filename,
       })
       // eslint-disable-next-line no-console
-      console.log(vrview)
+      console.log(vrView)
     },
   },
 }
