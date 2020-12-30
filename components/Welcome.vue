@@ -9,7 +9,6 @@
 <script>
 if (process.client) {
   require('../plugins/vrview.min.js')
-  window.addEventListener('load', this.onVrViewLoad())
 }
 export default {
   props: {
@@ -18,12 +17,25 @@ export default {
       required: true,
     },
   },
+  mounted() {
+    window.addEventListener('load', this.onVrViewLoad)
+
+    // function onVrViewLoad() {
+    //   // Selector '#vrview' finds element with id 'vrview'.
+    //   // eslint-disable-next-line no-undef
+    //   const vrView = new VRView.Player('#vrview', {
+    //     image: this.blok.vrImage.filename,
+    //   })
+    //   // eslint-disable-next-line no-console
+    //   console.log(vrView)
+    // }
+  },
   methods: {
     onVrViewLoad() {
       // Selector '#vrview' finds element with id 'vrview'.
       // eslint-disable-next-line no-undef
       const vrView = new VRView.Player('#vrview', {
-        image: this.block.vrImage.filename,
+        image: this.blok.vrImage.filename,
       })
       // eslint-disable-next-line no-console
       console.log(vrView)
