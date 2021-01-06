@@ -6,6 +6,7 @@ import Feature from '~/components/Feature.vue'
 import LanguageSelect from '~/components/LanguageSelect.vue'
 import Welcome from '~/components/Welcome.vue'
 import Content from '~/components/Content.vue'
+import Checklist from '~/components/Checklist.vue'
 
 Vue.component('page', Page)
 Vue.component('teaser', Teaser)
@@ -14,3 +15,4 @@ Vue.component('feature', Feature)
 Vue.component('LanguageSelect', LanguageSelect)
 Vue.component('Welcome', Welcome)
 Vue.component('Content', Content)
+Vue.component('Checklist', Checklist)
