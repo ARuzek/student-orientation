@@ -1,13 +1,10 @@
+/* eslint-disable vue/no-template-shadow */
 <template>
-  <div v-editable="blok" class="pb-8 mb-6 font-bold">
-    <ul>
-      <li>{{ blok.checklist1 }}</li>
-      <li>{{ blok.checklist2 }}</li>
-      <li>{{ blok.checklist3 }}</li>
-      <li>{{ blok.checklist4 }}</li>
-      <li>{{ blok.checklist5 }}</li>
-    </ul>
-  </div>
+  <ul v-editable="blok" class="flex flex-col mb-6">
+    <li v-for="blok in blok.list" :key="blok._uid" class="flex-auto px-6">
+      <component :is="blok.component" :blok="blok" />
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -20,8 +17,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-section p {
-  white-space: pre;
-}
-</style>

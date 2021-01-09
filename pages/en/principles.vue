@@ -65,9 +65,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-component {
-  display: flex;
-  flex-direction: row;
-}
-</style>
