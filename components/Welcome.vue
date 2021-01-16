@@ -32,6 +32,7 @@ export default {
       // eslint-disable-next-line no-undef
       const vrView = new VRView.Player('#vrview', {
         image: this.blok.vrImage.filename,
+        width: '100%',
       })
       // eslint-disable-next-line no-console
       console.log(vrView)
