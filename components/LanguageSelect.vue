@@ -5,13 +5,108 @@
     <nav>
       <ul>
         <li>
-          <nuxt-link class="text-teal-600 hover:underline" to="/en/">
-            I speak English
+          <nuxt-link class="flex items-center" to="/en/">
+            <img
+              class="button ml-3 w-12 h-9 p-2 rounded-lg"
+              src="/icons/volume_up-white-48dp.svg"
+              alt="listen to audio"
+            />
+            <p class="flex-grow text-left pl-6">I speak English</p>
+            <img
+              class=""
+              src="/icons/keyboard_arrow_right-black-48dp.svg"
+              alt="Continue in English"
+            />
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link class="text-teal-600 hover:underline" to="/ar/">
-            I speak Arabic
+          <nuxt-link class="flex items-center" to="/en/">
+            <img
+              class="button ml-3 w-12 h-9 p-2 rounded-lg"
+              src="/icons/volume_up-white-48dp.svg"
+              alt="listen to audio"
+            />
+            <p class="flex-grow text-left pl-6">I speak English</p>
+            <img
+              class=""
+              src="/icons/keyboard_arrow_right-black-48dp.svg"
+              alt="Continue in English"
+            />
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="flex items-center" to="/en/">
+            <img
+              class="button ml-3 w-12 h-9 p-2 rounded-lg"
+              src="/icons/volume_up-white-48dp.svg"
+              alt="listen to audio"
+            />
+            <p class="flex-grow text-left pl-6">I speak English</p>
+            <img
+              class=""
+              src="/icons/keyboard_arrow_right-black-48dp.svg"
+              alt="Continue in English"
+            />
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="flex items-center" to="/en/">
+            <img
+              class="button ml-3 w-12 h-9 p-2 rounded-lg"
+              src="/icons/volume_up-white-48dp.svg"
+              alt="listen to audio"
+            />
+            <p class="flex-grow text-left pl-6">I speak English</p>
+            <img
+              class=""
+              src="/icons/keyboard_arrow_right-black-48dp.svg"
+              alt="Continue in English"
+            />
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="flex items-center" to="/en/">
+            <img
+              class="button ml-3 w-12 h-9 p-2 rounded-lg"
+              src="/icons/volume_up-white-48dp.svg"
+              alt="listen to audio"
+            />
+            <p class="flex-grow text-left pl-6">I speak English</p>
+            <img
+              class=""
+              src="/icons/keyboard_arrow_right-black-48dp.svg"
+              alt="Continue in English"
+            />
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="flex items-center" to="/en/">
+            <img
+              class="button ml-3 w-12 h-9 p-2 rounded-lg"
+              src="/icons/volume_up-white-48dp.svg"
+              alt="listen to audio"
+            />
+            <p class="flex-grow text-left pl-6">I speak English</p>
+            <img
+              class=""
+              src="/icons/keyboard_arrow_right-black-48dp.svg"
+              alt="Continue in English"
+            />
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="flex items-center" to="/en/">
+            <img
+              class="button ml-3 w-12 h-9 p-2 rounded-lg"
+              src="/icons/volume_up-white-48dp.svg"
+              alt="listen to audio"
+            />
+            <p class="flex-grow text-left pl-6">I speak English</p>
+            <img
+              class=""
+              src="/icons/keyboard_arrow_right-black-48dp.svg"
+              alt="Continue in English"
+            />
           </nuxt-link>
         </li>
       </ul>
@@ -29,3 +124,15 @@ export default {
   },
 }
 </script>
+<style scoped>
+li {
+  background: #f4f4f4;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 1rem 0rem;
+  margin: 1rem;
+}
+.button {
+  background-color: #ec7026;
+}
+</style>

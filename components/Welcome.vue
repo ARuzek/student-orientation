@@ -7,8 +7,12 @@
     <p class="text-left">{{ blok.interaction_instruction }}</p>
     <p class="text-left">{{ blok.audio_instruction }}</p>
     <h1 class="text-5xl font-bold">{{ blok.prompt }}</h1>
-    <button>{{ blok.button_previous }}</button>
-    <button>{{ blok.button_next }}</button>
+    <a class="text-white button ml-3 w-12 h-9 p-2 rounded-lg">{{
+      blok.button_previous
+    }}</a>
+    <a class="text-white button ml-3 w-12 h-9 p-2 rounded-lg">{{
+      blok.button_next
+    }}</a>
   </div>
 </template>
 
@@ -40,3 +44,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.button {
+  background-color: #ec7026;
+}
+</style>

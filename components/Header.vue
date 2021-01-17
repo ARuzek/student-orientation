@@ -10,14 +10,14 @@
     <div class="flex">
       <a href="/">
         <img
-          class="button m-2 w-14 h-9 p-3 rounded-lg"
+          class="button m-2 w-12 h-9 p-2 rounded-lg"
           src="/icons/language-white-48dp.svg"
           alt="change language"
         />
       </a>
       <a href="/">
         <img
-          class="button m-2 w-14 h-9 p-3 rounded-lg"
+          class="button m-2 w-12 h-9 p-2 rounded-lg"
           src="/icons/volume_up-white-48dp.svg"
           alt="listen to audio"
         />
