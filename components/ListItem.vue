@@ -2,12 +2,11 @@
   <div v-editable="blok" class="pb-8 mb-6">
     <label>
       <input
-        :id="dynamicId"
-        :ref="dynamicRef"
         v-model="itemChecked"
         type="checkbox"
         name="item"
         value="item"
+        @click="change"
         @change="$emit('change', $event.target.checked)"
       />
       <img
@@ -28,14 +27,39 @@
 <script>
 export default {
   model: {
-    prop: 'itemChecked',
+    // prop: 'itemChecked',
     event: 'change',
   },
   props: {
-    itemChecked: Boolean,
+    // itemChecked: Boolean,
+    whichItem: {
+      type: Number,
+      default: 100,
+    },
+    whichPage: {
+      type: String,
+      default: 'unknownPage',
+    },
     blok: {
       type: Object,
       required: true,
+    },
+  },
+  data() {
+    return {
+      itemChecked: false,
+    }
+  },
+  methods: {
+    change() {
+      const page = 'set' + this.whichPage
+      const item = this.whichItem
+      this.$store.commit({
+        type: page,
+        itemIndex: item,
+        isChecked: !this.itemChecked,
+      })
+      console.log(this.$store.state.Principles)
     },
   },
 }

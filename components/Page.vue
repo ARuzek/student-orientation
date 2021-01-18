@@ -4,6 +4,7 @@
     <component
       :is="blok.component"
       v-for="blok in blok.body"
+      :ref="getNameOfPage"
       :key="blok._uid"
       :blok="blok"
     />
@@ -16,6 +17,11 @@ export default {
     blok: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    getNameOfPage() {
+      return this.$parent.story.name
     },
   },
 }

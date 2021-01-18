@@ -1,13 +1,8 @@
 export const state = () => ({
-  principles: true,
-  studentcentered: false,
-  schoolasahome: false,
-  teachersasmentors: false,
-  globalthinking: false,
+  Principles: [false, false, false, false, false],
 })
-
-// export const mutations = {
-//   increment(state) {
-//     state.count++
-//   },
-// }
+export const mutations = {
+  setPrinciples(state, payload) {
+    state.Principles[payload.itemIndex] = payload.isChecked
+  },
+}
