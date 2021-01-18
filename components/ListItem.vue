@@ -1,7 +1,15 @@
 <template>
   <div v-editable="blok" class="pb-8 mb-6">
     <label>
-      <input v-model="itemChecked" type="checkbox" name="item" value="item" />
+      <input
+        :id="dynamicId"
+        :ref="dynamicRef"
+        v-model="itemChecked"
+        type="checkbox"
+        name="item"
+        value="item"
+        @change="$emit('change', $event.target.checked)"
+      />
       <img
         v-show="!itemChecked"
         src="/icons/check_box_outline_blank-black-48dp.svg"
@@ -19,16 +27,16 @@
 
 <script>
 export default {
+  model: {
+    prop: 'itemChecked',
+    event: 'change',
+  },
   props: {
+    itemChecked: Boolean,
     blok: {
       type: Object,
       required: true,
     },
-  },
-  data() {
-    return {
-      itemChecked: false,
-    }
   },
 }
 </script>

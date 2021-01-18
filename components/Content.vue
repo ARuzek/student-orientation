@@ -22,6 +22,17 @@ export default {
       required: true,
     },
   },
+  // data() {
+  //   return {
+  //     page1: this.isPage1,
+  //   }
+  // },
+  // computed: {
+  //   isPage1() {
+  //     const isChecked = document.getElementsByTagName('input')[0].checked
+  //     return isChecked
+  //   },
+  // },
 }
 </script>
 <style scoped>
