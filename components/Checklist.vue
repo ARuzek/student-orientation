@@ -26,6 +26,7 @@ export default {
     whichPage: {
       type: String,
       required: true,
+      default: 'unknown',
     },
   },
 }

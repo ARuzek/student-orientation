@@ -50,16 +50,18 @@ export default {
       itemChecked: false,
     }
   },
+
   methods: {
+    // when a list item is checked, the page with the list on it is updated in the Vuex store database
     change() {
       const page = 'set' + this.whichPage
-      const item = this.whichItem
+      const item = 'page' + this.whichItem
       this.$store.commit({
         type: page,
         itemIndex: item,
         isChecked: !this.itemChecked,
       })
-      console.log(this.$store.state.Principles)
+      return true
     },
   },
 }

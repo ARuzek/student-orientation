@@ -18,6 +18,7 @@ export default {
       type: Object,
       required: true,
     },
+    changeDetected: Boolean,
   },
   computed: {
     getNameOfPage() {
