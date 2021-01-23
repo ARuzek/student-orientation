@@ -1,6 +1,6 @@
 /* eslint-disable vue/no-template-shadow */
 <template>
-  <ul v-editable="blok" class="flex flex-col mb-6">
+  <ul v-editable="blok" class="flex flex-col mb-6 desktop-only">
     <li
       v-for="(blok, index) in blok.list"
       :key="blok._uid"
@@ -10,6 +10,7 @@
         :is="blok.component"
         :which-page="whichPage"
         :which-item="index"
+        :is-checked="index == 0"
         :blok="blok"
       />
     </li>
@@ -31,3 +32,10 @@ export default {
   },
 }
 </script>
+<style scoped>
+@media only screen and (max-width: 600px) {
+  .desktop-only {
+    display: none;
+  }
+}
+</style>

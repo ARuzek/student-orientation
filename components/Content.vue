@@ -12,31 +12,43 @@
     </section>
     <section v-if="isPage1">
       <img
-        class="h-60 w-40 mb-4 object-cover"
+        v-if="blok.imageOnPage1.filename"
+        class="h-60 w-40 mb-4"
         :src="blok.imageOnPage1.filename"
       />
-      <p>{{ blok.textOnPage1 }}</p>
+      <div v-for="blok in blok.textOnPage1" :key="blok._uid">
+        <component :is="blok.component" :blok="blok" />
+      </div>
     </section>
     <section v-if="isPage2">
       <img
-        class="h-48 w-full mb-4 object-cover"
+        v-if="blok.imageOnPage2.filename"
+        class="h-60 w-40 mb-4"
         :src="blok.imageOnPage2.filename"
       />
-      <p>{{ blok.textOnPage2 }}</p>
+      <div v-for="blok in blok.textOnPage2" :key="blok._uid">
+        <component :is="blok.component" :blok="blok" />
+      </div>
     </section>
     <section v-if="isPage3">
       <img
-        class="h-48 w-full mb-4 object-cover"
+        v-if="blok.imageOnPage3.filename"
+        class="h-60 w-40 mb-4"
         :src="blok.imageOnPage3.filename"
       />
-      <p>{{ blok.textOnPage3 }}</p>
+      <div v-for="blok in blok.textOnPage3" :key="blok._uid">
+        <component :is="blok.component" :blok="blok" />
+      </div>
     </section>
     <section v-if="isPage4">
       <img
-        class="h-48 w-full mb-4 object-cover"
+        v-if="blok.imageOnPage4.filename"
+        class="h-60 w-40 mb-4"
         :src="blok.imageOnPage4.filename"
       />
-      <p>{{ blok.textOnPage4 }}</p>
+      <div v-for="blok in blok.textOnPage4" :key="blok._uid">
+        <component :is="blok.component" :blok="blok" />
+      </div>
     </section>
   </div>
 </template>
@@ -53,11 +65,6 @@ export default {
       type: String,
       default: 'Principles',
     },
-  },
-  data() {
-    return {
-      thisPage: this.whichPage,
-    }
   },
   computed: {
     // isPage computations find the page of content that should display based on 1. whichPage we're displaying content on and 2. whether the checkbox for the content page is checked

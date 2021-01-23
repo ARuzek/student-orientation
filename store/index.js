@@ -1,6 +1,6 @@
 export const state = () => ({
   Principles: {
-    page0: false,
+    page0: true,
     page1: false,
     page2: false,
     page3: false,

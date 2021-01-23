@@ -40,6 +40,10 @@ export default {
       type: String,
       default: 'unknownPage',
     },
+    isChecked: {
+      type: Boolean,
+      default: false,
+    },
     blok: {
       type: Object,
       required: true,
@@ -47,10 +51,9 @@ export default {
   },
   data() {
     return {
-      itemChecked: false,
+      itemChecked: this.isChecked,
     }
   },
-
   methods: {
     // when a list item is checked, the page with the list on it is updated in the Vuex store database
     change() {
