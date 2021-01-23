@@ -10,7 +10,7 @@
         :is="blok.component"
         :which-page="whichPage"
         :which-item="index"
-        :is-checked="index == 0"
+        :is-checked="areAnyChecked(index)"
         :blok="blok"
       />
     </li>
@@ -28,6 +28,14 @@ export default {
       type: String,
       required: true,
       default: 'unknown',
+    },
+  },
+  methods: {
+    // when a list item is checked, the page with the list on it is updated in the Vuex store database
+    areAnyChecked(index) {
+      const page = 'get' + this.whichPage
+      const item = 'page' + index
+      return this.$store.getters.getPrinciples(item)
     },
   },
 }
