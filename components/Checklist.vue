@@ -35,7 +35,8 @@ export default {
     areAnyChecked(index) {
       const page = 'get' + this.whichPage
       const item = 'page' + index
-      return this.$store.getters.getPrinciples(item)
+      const pageitem = this.$store.getters[page]
+      return pageitem(item)
     },
   },
 }

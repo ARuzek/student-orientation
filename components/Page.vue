@@ -19,6 +19,11 @@ export default {
       required: true,
     },
   },
+  provide() {
+    return {
+      getNameOfPage: this.getNameOfPage,
+    }
+  },
   computed: {
     getNameOfPage() {
       return this.$parent.story.name
