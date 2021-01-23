@@ -1,16 +1,39 @@
 <template>
   <div v-editable="blok" class="pb-8 mb-6 font-bold text-center">
     <section v-if="isPage0">
-      <p>{{ blok.text }}</p>
-      <ul>
-        <li>{{ blok.listitem1 }}</li>
-        <li>{{ blok.listitem2 }}</li>
-        <li>{{ blok.listitem3 }}</li>
-        <li>{{ blok.listitem4 }}</li>
-      </ul>
+      <img
+        class="h-48 w-full mb-4 object-cover"
+        :src="blok.imageOnPage0.filename"
+      />
+      <p>{{ blok.textOnPage0 }}</p>
     </section>
-    <section v-else>
-      <p>The other page</p>
+    <section v-if="isPage1">
+      <img
+        class="h-48 w-full mb-4 object-cover"
+        :src="blok.imageOnPage1.filename"
+      />
+      <p>{{ blok.textOnPage1 }}</p>
+    </section>
+    <section v-if="isPage2">
+      <img
+        class="h-48 w-full mb-4 object-cover"
+        :src="blok.imageOnPage2.filename"
+      />
+      <p>{{ blok.textOnPage2 }}</p>
+    </section>
+    <section v-if="isPage3">
+      <img
+        class="h-48 w-full mb-4 object-cover"
+        :src="blok.imageOnPage3.filename"
+      />
+      <p>{{ blok.textOnPage3 }}</p>
+    </section>
+    <section v-if="isPage4">
+      <img
+        class="h-48 w-full mb-4 object-cover"
+        :src="blok.imageOnPage4.filename"
+      />
+      <p>{{ blok.textOnPage4 }}</p>
     </section>
   </div>
 </template>
@@ -25,8 +48,7 @@ export default {
     // whichPage returns the name of the page on which Content exists. This comes from the parent component.
     whichPage: {
       type: String,
-      required: true,
-      default: 'unknown',
+      default: 'Principles',
     },
   },
   data() {
@@ -37,14 +59,24 @@ export default {
   computed: {
     // isPage computations find the page of content that should display based on 1. whichPage we're displaying content on and 2. whether the checkbox for the content page is checked
     isPage0() {
-      const thisPage = this.whichPage
-      let ofThisPage = 'Principles' // sets up default fall back
-      ofThisPage = thisPage
       // eslint-disable-next-line dot-notation
-      const { page0 } = this.$store.state[ofThisPage]
-      console.log(page0)
-      // console.log(ofThatPage)
-      return this.$store.state.Principles.page0
+      return this.$store.state[this.whichPage].page0
+    },
+    isPage1() {
+      // eslint-disable-next-line dot-notation
+      return this.$store.state[this.whichPage].page1
+    },
+    isPage2() {
+      // eslint-disable-next-line dot-notation
+      return this.$store.state[this.whichPage].page2
+    },
+    isPage3() {
+      // eslint-disable-next-line dot-notation
+      return this.$store.state[this.whichPage].page3
+    },
+    isPage4() {
+      // eslint-disable-next-line dot-notation
+      return this.$store.state[this.whichPage].page4
     },
   },
 }
