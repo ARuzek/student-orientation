@@ -1,6 +1,9 @@
 <template>
   <div v-editable="blok" class="pb-8 mb-6 text-left">
-    <section v-if="isPage0">
+    <section
+      v-if="isPage0"
+      :class="{ hidden: isPage1 || isPage2 || isPage3 || isPage4 }"
+    >
       <img
         v-if="blok.imageOnPage0.filename"
         class="h-60 w-40 mb-4"
@@ -10,7 +13,7 @@
         <component :is="blok.component" :blok="blok" />
       </div>
     </section>
-    <section v-if="isPage1">
+    <section v-if="isPage1" :class="{ hidden: isPage2 || isPage3 || isPage4 }">
       <img
         v-if="blok.imageOnPage1.filename"
         class="h-60 w-40 mb-4"
@@ -20,7 +23,7 @@
         <component :is="blok.component" :blok="blok" />
       </div>
     </section>
-    <section v-if="isPage2">
+    <section v-if="isPage2" :class="{ hidden: isPage3 || isPage4 }">
       <img
         v-if="blok.imageOnPage2.filename"
         class="h-60 w-40 mb-4"
@@ -30,7 +33,7 @@
         <component :is="blok.component" :blok="blok" />
       </div>
     </section>
-    <section v-if="isPage3">
+    <section v-if="isPage3" :class="{ hidden: isPage4 }">
       <img
         v-if="blok.imageOnPage3.filename"
         class="h-60 w-40 mb-4"
