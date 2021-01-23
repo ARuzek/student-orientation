@@ -10,6 +10,7 @@ import Checklist from '~/components/Checklist.vue'
 import ListItem from '~/components/ListItem.vue'
 import Audio from '~/components/Audio.vue'
 import Title from '~/components/Title.vue'
+import ParagraphText from '~/components/ParagraphText.vue'
 
 Vue.component('page', Page)
 Vue.component('teaser', Teaser)
@@ -22,3 +23,4 @@ Vue.component('Checklist', Checklist)
 Vue.component('ListItem', ListItem)
 Vue.component('Audio', Audio)
 Vue.component('Title', Title)
+Vue.component('ParagraphText', ParagraphText)

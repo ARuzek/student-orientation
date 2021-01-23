@@ -1,15 +1,18 @@
 <template>
-  <div v-editable="blok" class="pb-8 mb-6 font-bold text-center">
+  <div v-editable="blok" class="pb-8 mb-6 text-left">
     <section v-if="isPage0">
       <img
-        class="h-48 w-full mb-4 object-cover"
+        v-if="blok.imageOnPage0.filename"
+        class="h-60 w-40 mb-4"
         :src="blok.imageOnPage0.filename"
       />
-      <p>{{ blok.textOnPage0 }}</p>
+      <div v-for="blok in blok.textOnPage0" :key="blok._uid">
+        <component :is="blok.component" :blok="blok" />
+      </div>
     </section>
     <section v-if="isPage1">
       <img
-        class="h-48 w-full mb-4 object-cover"
+        class="h-60 w-40 mb-4 object-cover"
         :src="blok.imageOnPage1.filename"
       />
       <p>{{ blok.textOnPage1 }}</p>
@@ -82,7 +85,7 @@ export default {
 }
 </script>
 <style scoped>
-section p {
-  white-space: pre;
+section img {
+  margin: 0 auto;
 }
 </style>
