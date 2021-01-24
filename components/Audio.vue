@@ -1,6 +1,5 @@
 <template>
-  <div v-editable="blok" class="pb-8 mb-6 font-bold text-center">
-    <h1>hi audio</h1>
+  <div v-editable="blok">
     <audio controls>
       <source :src="blok.audio.filename" />
       Your browser does not support the audio element.
@@ -18,3 +17,19 @@ export default {
   },
 }
 </script>
+<style scoped>
+div {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  background-color: #ec7026;
+  border-radius: 0.5rem;
+}
+audio {
+  width: 300px;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: #ec7026;
+  transform: scale(0.9);
+}
+</style>

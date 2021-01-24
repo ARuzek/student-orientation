@@ -75,6 +75,7 @@ div {
   border-radius: 8px;
   opacity: 1;
   padding: 1rem 0rem;
+  min-width: 300px;
 }
 label {
   display: flex;

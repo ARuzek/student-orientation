@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="pb-8 mb-6 text-left">
+  <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6 text-left">
     <section
       v-if="isPage0"
       :class="{ hidden: isPage1 || isPage2 || isPage3 || isPage4 }"

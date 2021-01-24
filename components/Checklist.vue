@@ -1,6 +1,6 @@
 /* eslint-disable vue/no-template-shadow */
 <template>
-  <ul v-editable="blok" class="flex flex-col mb-6 desktop-only">
+  <ul v-editable="blok" class="flex flex-col mb-6 mt-32 desktop-only">
     <li
       v-for="(blok, index) in blok.list"
       :key="blok._uid"
