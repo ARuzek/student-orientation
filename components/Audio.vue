@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok">
+  <div class="invisible" v-editable="blok">
     <audio controls>
       <source :src="blok.audio.filename" />
       Your browser does not support the audio element.
