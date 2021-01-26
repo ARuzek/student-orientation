@@ -11,7 +11,7 @@
       blok.button_previous
     }}</a>
     <a
-      href="./Principles/"
+      href="./principles/"
       class="text-white button ml-3 w-12 h-9 p-4 rounded-lg"
       >{{ blok.button_next }}</a
     >

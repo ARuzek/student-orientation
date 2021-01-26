@@ -2,7 +2,7 @@
   <div v-editable="blok" class="pb-8 mb-6 font-bold text-center">
     <h2 class="text-base">{{ blok.subheadline }}</h2>
     <h1 class="text-5xl">{{ blok.headline }}</h1>
-    <nav>
+    <nav class="max-w-2xl m-auto">
       <ul>
         <li>
           <nuxt-link class="flex items-center" to="/en/">
@@ -20,13 +20,13 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link class="flex items-center" to="/en/">
+          <nuxt-link class="flex items-center" to="/fa/">
             <img
               class="button ml-3 w-12 h-9 p-2 rounded-lg"
               src="/icons/volume_up-white-48dp.svg"
               alt="listen to audio"
             />
-            <p class="flex-grow text-left pl-6">I speak English</p>
+            <p class="flex-grow text-right pl-6 ltr">من فارسی صحبت می کنم</p>
             <img
               class=""
               src="/icons/keyboard_arrow_right-black-48dp.svg"
@@ -134,5 +134,8 @@ li {
 }
 .button {
   background-color: #ec7026;
+}
+.ltr {
+  direction: ltr;
 }
 </style>
