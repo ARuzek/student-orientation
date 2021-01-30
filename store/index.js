@@ -12,6 +12,8 @@ export const state = () => ({
     page2: false,
     page3: false,
     page4: false,
+    page5: false,
+    page6: false,
   },
   Health: {
     page0: true,
