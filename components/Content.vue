@@ -81,7 +81,7 @@
         <component :is="eachblok.component" :blok="eachblok" />
       </div>
     </section>
-    <nuxt-link v-if="isPage4" :to="to">
+    <nuxt-link v-if="isPage4 || isPage6" :to="to">
       <p>{{ blok.nextbutton }}</p></nuxt-link
     >
   </div>
@@ -148,5 +148,8 @@ export default {
 <style scoped>
 section img {
   margin: 0 auto;
+}
+nuxt-link {
+  background-color: #ec7026;
 }
 </style>
