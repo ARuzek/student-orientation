@@ -51,6 +51,7 @@
       />
       <div v-for="blok in blok.textOnPage4" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
+        <nuxt-link :to="to">{{ blok.button }}</nuxt-link>
       </div>
     </section>
   </div>
@@ -70,6 +71,18 @@ export default {
     },
   },
   computed: {
+    to() {
+      switch (this.whichPage) {
+        case 'Principles':
+          return '/rules'
+        case 'Rules':
+          return '/health'
+        case 'Health':
+          return '/complete'
+        // code block
+      }
+      return true
+    },
     // isPage computations find the page of content that should display based on 1. whichPage we're displaying content on and 2. whether the checkbox for the content page is checked
     isPage0() {
       // eslint-disable-next-line dot-notation
