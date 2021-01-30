@@ -106,7 +106,7 @@ export default {
         case 'Principles':
           return '../rules'
         case 'Rules':
-          return '../health'
+          return './health'
         case 'Health':
           return '../complete'
         // code block
