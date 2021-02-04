@@ -1,4 +1,5 @@
 export const state = () => ({
+  audio: false,
   Principles: {
     page0: true,
     page1: false,
@@ -32,6 +33,9 @@ export const mutations = {
   },
   setHealth(state, payload) {
     state.Health[payload.itemIndex] = payload.isChecked
+  },
+  setAudio(state, payload) {
+    state.audio = !state.audio
   },
 }
 export const getters = {

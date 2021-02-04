@@ -20,7 +20,7 @@
           class="button m-2 w-12 h-9 p-2 rounded-lg"
           src="/icons/volume_up-white-48dp.svg"
           alt="listen to audio"
-          :class="{ move: clicked }"
+          :class="{ move: $store.state.audio }"
           @click.prevent="audioShown"
         />
       </a>
@@ -29,14 +29,11 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      clicked: false,
-    }
-  },
   methods: {
     audioShown() {
-      this.clicked = !this.clicked
+      this.$store.commit({
+        type: 'setAudio',
+      })
     },
   },
 }

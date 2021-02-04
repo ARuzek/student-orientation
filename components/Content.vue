@@ -81,7 +81,7 @@
         <component :is="eachblok.component" :blok="eachblok" />
       </div>
     </section>
-    <nuxt-link v-if="isPage4 || isPage6" :to="to">
+    <nuxt-link v-if="isPage4" :to="to">
       <p>{{ blok.nextbutton }}</p></nuxt-link
     >
   </div>
