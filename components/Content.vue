@@ -82,8 +82,8 @@
       </div>
     </section>
     <nuxt-link v-if="isPage4" :to="to">
-      <p>{{ blok.nextbutton }}</p></nuxt-link
-    >
+      <p>{{ blok.nextbutton }}</p>
+    </nuxt-link>
   </div>
 </template>
 
