@@ -24,28 +24,28 @@
             <img
               class="button ml-3 w-12 h-9 p-2 rounded-lg"
               src="/icons/volume_up-white-48dp.svg"
-              alt="listen to audio"
+              alt="گوش کن"
             />
             <p class="flex-grow text-right pl-6 ltr">من فارسی صحبت می کنم</p>
             <img
               class=""
               src="/icons/keyboard_arrow_right-black-48dp.svg"
-              alt="Continue in English"
+              alt="من فارسی صحبت می کنم"
             />
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link class="flex items-center" to="/en/">
+          <nuxt-link class="flex items-center" to="/tr/">
             <img
               class="button ml-3 w-12 h-9 p-2 rounded-lg"
               src="/icons/volume_up-white-48dp.svg"
-              alt="listen to audio"
+              alt="dinlemek"
             />
-            <p class="flex-grow text-left pl-6">I speak English</p>
+            <p class="flex-grow text-left pl-6">Ben türkçe konuşuyorum</p>
             <img
               class=""
               src="/icons/keyboard_arrow_right-black-48dp.svg"
-              alt="Continue in English"
+              alt="Ben türkçe konuşuyorum"
             />
           </nuxt-link>
         </li>
