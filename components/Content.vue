@@ -30,7 +30,7 @@
     </section>
     <section
       v-if="isPage2"
-      :class="{ hidden: isPage3 || isPage4 || isPage5 || isPage6 }"
+      :class="{ invisible: isPage3 || isPage4 || isPage5 || isPage6 }"
     >
       <img
         v-if="blok.imageOnPage2.filename"
