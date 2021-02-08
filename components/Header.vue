@@ -42,13 +42,14 @@ export default {
 .button {
   background-color: #ec7026;
 }
+
 header {
   justify-content: space-between;
   margin-right: 0;
   transition: margin-right 300ms;
 }
 .move {
-  margin-right: calc(300px - 1.25rem);
+  margin-right: calc(300px - 0.75rem);
   transition: margin-right 300ms;
 }
 </style>
