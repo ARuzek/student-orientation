@@ -97,7 +97,7 @@ export default {
       default: 'Principles',
     },
   },
-
+  computed: {
     // isPage computations find the page of content that should display based on 1. whichPage we're displaying content on and 2. whether the checkbox for the content page is checked
     isPage0() {
       // eslint-disable-next-line dot-notation

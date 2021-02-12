@@ -2,7 +2,7 @@
   <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6 text-center">
     <h2 class="text-base font-bold text-center">{{ blok.subheadline }}</h2>
     <h1 class="text-5xl font-bold text-center">{{ blok.headline }}</h1>
-    <div id="vrview"></div>
+    <div class="vrview"><div id="vrview"></div></div>
     <p class="text-left mb-6 mt-6">{{ blok.mission }}</p>
     <p class="text-left mb-6">{{ blok.interaction_instruction }}</p>
     <p class="text-left mb-6">{{ blok.audio_instruction }}</p>
@@ -30,7 +30,7 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener('load', this.onVrViewLoad)
+    this.onVrViewLoad()
   },
   methods: {
     onVrViewLoad() {
@@ -38,8 +38,8 @@ export default {
       // eslint-disable-next-line no-undef
       const vrView = new VRView.Player('#vrview', {
         image: this.blok.vrImage.filename,
-        width: '100%',
-        height: '300px',
+        width: '500px',
+        height: '500px',
       })
       // eslint-disable-next-line no-console
       console.log(vrView)
@@ -50,5 +50,10 @@ export default {
 <style scoped>
 .button {
   background-color: #ec7026;
+}
+#vrview {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
 }
 </style>
