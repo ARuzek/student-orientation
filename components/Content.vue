@@ -81,9 +81,6 @@
         <component :is="eachblok.component" :blok="eachblok" />
       </div>
     </section>
-    <nuxt-link v-if="isPage4" :to="to">
-      <p>{{ blok.nextbutton }}</p>
-    </nuxt-link>
   </div>
 </template>
 
@@ -100,19 +97,7 @@ export default {
       default: 'Principles',
     },
   },
-  computed: {
-    to() {
-      switch (this.whichPage) {
-        case 'Principles':
-          return '../rules'
-        case 'Rules':
-          return '../health'
-        case 'Health':
-          return '../complete'
-        // code block
-      }
-      return true
-    },
+
     // isPage computations find the page of content that should display based on 1. whichPage we're displaying content on and 2. whether the checkbox for the content page is checked
     isPage0() {
       // eslint-disable-next-line dot-notation
