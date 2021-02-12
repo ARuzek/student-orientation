@@ -3,10 +3,12 @@
     <h2 class="text-base font-bold text-center">{{ blok.subheadline }}</h2>
     <h1 class="text-5xl font-bold text-center">{{ blok.headline }}</h1>
     <div class="vrview"><div id="vrview"></div></div>
-    <p class="text-left mb-6 mt-6">{{ blok.mission }}</p>
-    <p class="text-left mb-6">{{ blok.interaction_instruction }}</p>
-    <p class="text-left mb-6">{{ blok.audio_instruction }}</p>
-    <h1 class="text-5xl font-bold mb-6">{{ blok.prompt }}</h1>
+    <p class="text-left mb-6 mt-6 max-w-5xl mx-auto">{{ blok.mission }}</p>
+    <p class="text-left mb-6 max-w-5xl mx-auto">
+      {{ blok.interaction_instruction }}
+    </p>
+    <p class="text-left mb-6 max-w-5xl mx-auto">{{ blok.audio_instruction }}</p>
+    <h1 class="text-5xl font-bold mb-6 max-w-5xl mx-auto">{{ blok.prompt }}</h1>
     <a class="text-white button ml-3 w-12 h-9 p-4 rounded-lg">{{
       blok.button_previous
     }}</a>

@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6">
+  <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6 max-w-screen-md">
     <section
       v-if="isPage0"
       :class="{
