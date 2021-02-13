@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :dir="isRtl()">
     <component
       :is="story.content.component"
       v-if="story.content.component"
@@ -47,6 +47,7 @@ export default {
       story: { content: {} },
     }
   },
+
   mounted() {
     // Use the input event for instant update of content
     this.$storybridge.on('input', (event) => {
@@ -62,6 +63,15 @@ export default {
         force: true,
       })
     })
+  },
+  methods: {
+    isRtl() {
+      if (this.$store.state.rtl) {
+        return 'rtl'
+      } else {
+        return 'ltr'
+      }
+    },
   },
 }
 </script>

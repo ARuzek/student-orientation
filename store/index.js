@@ -1,4 +1,5 @@
 export const state = () => ({
+  rtl: false,
   audio: false,
   Principles: {
     page0: true,
@@ -36,6 +37,9 @@ export const mutations = {
   },
   setAudio(state, payload) {
     state.audio = !state.audio
+  },
+  setRtl(state, payload) {
+    state.rtl = payload.isRtl
   },
 }
 export const getters = {

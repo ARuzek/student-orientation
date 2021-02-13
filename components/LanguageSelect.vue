@@ -20,7 +20,11 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link class="flex items-center" to="/fa/">
+          <nuxt-link
+            class="flex items-center"
+            to="/fa/"
+            @click.native="isRtl()"
+          >
             <img
               class="button ml-3 w-12 h-9 p-2 rounded-lg"
               src="/icons/volume_up-white-48dp.svg"
@@ -120,6 +124,16 @@ export default {
     blok: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    isRtl() {
+      // eslint-disable-next-line no-console
+      console.log('it works')
+      this.$store.commit({
+        type: 'setRtl',
+        isRtl: true,
+      })
     },
   },
 }
