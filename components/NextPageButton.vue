@@ -1,6 +1,8 @@
 <template>
   <nuxt-link :to="to">
-    <p class="button m-2 w-12 h-9 p-2 rounded-lg">{{ blok.nextbutton }}</p>
+    <p class="button m-2 w-12 h-9 py-2 px-20 text-center rounded-lg">
+      {{ blok.nextbutton }}
+    </p>
   </nuxt-link>
 </template>
 
@@ -16,21 +18,16 @@ export default {
 
   computed: {
     to() {
-      switch (this.whichPage) {
+      switch (this.getNameOfPage) {
         case 'Principles':
           return '../rules'
         case 'Rules':
-          return '../health'
+          return './health'
         case 'Health':
           return '../complete'
         // code block
       }
       return true
-    },
-  },
-  methods: {
-    whichPage() {
-      return this.getNameOfPage
     },
   },
 }
@@ -39,5 +36,6 @@ export default {
 <style scoped>
 .button {
   background-color: #ec7026;
+  color: white;
 }
 </style>
