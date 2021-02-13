@@ -4,6 +4,7 @@ import Teaser from '~/components/Teaser.vue'
 import Grid from '~/components/Grid.vue'
 import Feature from '~/components/Feature.vue'
 import LanguageSelect from '~/components/LanguageSelect.vue'
+import LanguageListItem from '~/components/LanguageListItem.vue'
 import Welcome from '~/components/Welcome.vue'
 import Content from '~/components/Content.vue'
 import Checklist from '~/components/Checklist.vue'
@@ -18,6 +19,7 @@ Vue.component('teaser', Teaser)
 Vue.component('grid', Grid)
 Vue.component('feature', Feature)
 Vue.component('LanguageSelect', LanguageSelect)
+Vue.component('LanguageListItem', LanguageListItem)
 Vue.component('Welcome', Welcome)
 Vue.component('Content', Content)
 Vue.component('Checklist', Checklist)

@@ -14,7 +14,7 @@ export default {
       { src: 'https://storage.googleapis.com/vrview/2.0/build/vrview.min.js' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'icons/favicon-32x32.png' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       {
         rel: 'stylesheet',
