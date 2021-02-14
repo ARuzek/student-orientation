@@ -25,13 +25,6 @@
       class="flex items-center"
       @click.prevent="$refs[blok.language].showModal()"
     >
-      <!-- <nuxt-link
-    v-editable="blok"
-    class="flex items-center"
-    :to="blok.page"
-    @click.native="blok.rtl ? isRtl : isLtr"
-  > -->
-
       <audio controls class="hidden">
         <source :src="blok.audio.filename" />
         Your browser does not support the audio element.
