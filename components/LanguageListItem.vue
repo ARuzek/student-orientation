@@ -14,7 +14,7 @@
           <nuxt-link
             class="button m-2 w-12 h-9 p-2 rounded-lg"
             :to="blok.page"
-            @click.native="blok.rtl ? isRtl : isLtr"
+            @click.native="blok.rtl ? isRtl() : isLtr()"
             >{{ blok.yes }}</nuxt-link
           >
         </menu>

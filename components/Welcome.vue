@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6 text-center">
+  <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6 text-center" :dir="isRtl()">
     <h2 class="text-base font-bold text-center">{{ blok.subheadline }}</h2>
     <h1 class="text-5xl font-bold text-center">{{ blok.headline }}</h1>
     <div class="vrview"><div id="vrview"></div></div>
@@ -35,6 +35,14 @@ export default {
     this.onVrViewLoad()
   },
   methods: {
+    isRtl() {
+      if (this.$store.state.rtl) {
+        return 'rtl'
+      } else {
+        return 'ltr'
+      }
+    },
+
     onVrViewLoad() {
       // Selector '#vrview' finds element with id 'vrview'.
       // eslint-disable-next-line no-undef

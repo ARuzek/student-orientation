@@ -1,5 +1,5 @@
 <template>
-  <section :dir="isRtl()">
+  <section>
     <component
       :is="story.content.component"
       v-if="story.content.component"
@@ -63,15 +63,6 @@ export default {
         force: true,
       })
     })
-  },
-  methods: {
-    isRtl() {
-      if (this.$store.state.rtl) {
-        return 'rtl'
-      } else {
-        return 'ltr'
-      }
-    },
   },
 }
 </script>
