@@ -9,6 +9,7 @@ import Welcome from '~/components/Welcome.vue'
 import Content from '~/components/Content.vue'
 import Checklist from '~/components/Checklist.vue'
 import ListItem from '~/components/ListItem.vue'
+import Image from '~/components/Image.vue'
 import Audio from '~/components/Audio.vue'
 import Title from '~/components/Title.vue'
 import ParagraphText from '~/components/ParagraphText.vue'
@@ -25,6 +26,7 @@ Vue.component('Content', Content)
 Vue.component('Checklist', Checklist)
 Vue.component('ListItem', ListItem)
 Vue.component('Audio', Audio)
+Vue.component('Image', Image)
 Vue.component('Title', Title)
 Vue.component('ParagraphText', ParagraphText)
 Vue.component('NextPageButton', NextPageButton)
