@@ -1,22 +1,27 @@
 <template>
-  <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6 text-center" :dir="isRtl()">
+  <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6" :dir="isRtl()">
     <h2 class="text-base font-bold text-center">{{ blok.subheadline }}</h2>
     <h1 class="text-5xl font-bold text-center">{{ blok.headline }}</h1>
     <div class="vrview"><div id="vrview"></div></div>
-    <p class="text-left mb-6 mt-6 max-w-5xl mx-auto">{{ blok.mission }}</p>
-    <p class="text-left mb-6 max-w-5xl mx-auto">
+    <p class="mb-6 mt-6 max-w-5xl mx-auto">{{ blok.mission }}</p>
+    <p class="mb-6 max-w-5xl mx-auto">
       {{ blok.interaction_instruction }}
     </p>
-    <p class="text-left mb-6 max-w-5xl mx-auto">{{ blok.audio_instruction }}</p>
-    <h1 class="text-5xl font-bold mb-6 max-w-5xl mx-auto">{{ blok.prompt }}</h1>
-    <a class="text-white button ml-3 w-12 h-9 p-4 rounded-lg">{{
-      blok.button_previous
-    }}</a>
-    <a
-      href="./principles/"
-      class="text-white button ml-3 w-12 h-9 p-4 rounded-lg"
-      >{{ blok.button_next }}</a
-    >
+    <p class="mb-6 max-w-5xl mx-auto">{{ blok.audio_instruction }}</p>
+    <div class="text-center">
+      <h1 class="text-5xl font-bold mb-6 max-w-5xl mx-auto">
+        {{ blok.prompt }}
+      </h1>
+
+      <a class="text-white button ml-3 w-12 h-9 p-4 rounded-lg">{{
+        blok.button_previous
+      }}</a>
+      <a
+        href="./principles/"
+        class="text-white button ml-3 w-12 h-9 p-4 rounded-lg"
+        >{{ blok.button_next }}</a
+      >
+    </div>
   </div>
 </template>
 
