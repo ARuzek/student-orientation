@@ -1,5 +1,8 @@
 <template>
-  <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6 max-w-screen-md">
+  <div
+    v-editable="blok"
+    class="pb-8 pl-8 pr-8 mb-6 max-w-screen-md my-0 mx-auto"
+  >
     <section
       v-if="isPage0"
       :class="{
@@ -51,13 +54,21 @@
         <component :is="blok.component" :blok="blok" />
       </div>
     </section>
-    <section v-if="isPage4" :class="{ hidden: isPage5 || isPage6 }">
+    <section
+      v-if="isPage4"
+      class="flex flex-col"
+      :class="{ hidden: isPage5 || isPage6 }"
+    >
       <img
         v-if="blok.imageOnPage4.filename"
         class="h-60 w-40 mb-4"
         :src="blok.imageOnPage4.filename"
       />
-      <div v-for="eachblok in blok.textOnPage4" :key="eachblok._uid">
+      <div
+        class="center"
+        v-for="eachblok in blok.textOnPage4"
+        :key="eachblok._uid"
+      >
         <component :is="eachblok.component" :blok="eachblok" />
       </div>
     </section>
@@ -71,13 +82,17 @@
         <component :is="eachblok.component" :blok="eachblok" />
       </div>
     </section>
-    <section v-if="isPage6">
+    <section v-if="isPage6" class="flex flex-col">
       <img
         v-if="blok.imageOnPage6.filename"
         class="h-60 w-40 mb-4"
         :src="blok.imageOnPage6.filename"
       />
-      <div v-for="eachblok in blok.textOnPage6" :key="eachblok._uid">
+      <div
+        v-for="eachblok in blok.textOnPage6"
+        :key="eachblok._uid"
+        class="center"
+      >
         <component :is="eachblok.component" :blok="eachblok" />
       </div>
     </section>
@@ -136,5 +151,8 @@ section img {
 }
 nuxt-link {
   background-color: #ec7026;
+}
+.center:last-of-type {
+  margin: 0 auto;
 }
 </style>

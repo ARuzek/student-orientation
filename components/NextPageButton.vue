@@ -1,8 +1,6 @@
 <template>
-  <nuxt-link :to="to" class="text-center">
-    <p class="button m-2 w-12 h-9 py-2 px-20 text-center rounded-lg">
-      {{ blok.nextbutton }}
-    </p>
+  <nuxt-link :to="to" class="button w-12 h-9 py-2 px-20 text-center rounded-lg">
+    {{ blok.nextbutton }}
   </nuxt-link>
 </template>
 
