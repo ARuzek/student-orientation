@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section dir="rtl">
     <component
       :is="story.content.component"
       v-if="story.content.component"
