@@ -9,49 +9,97 @@
         hidden: isPage1 || isPage2 || isPage3 || isPage4 || isPage5 || isPage6,
       }"
     >
-      <img
-        v-if="blok.imageOnPage0.filename"
-        class="h-60 w-40 mb-4"
-        :src="blok.imageOnPage0.filename"
-      />
-      <div v-for="blok in blok.textOnPage0" :key="blok._uid">
+      <div v-for="blok in blok.titleOnPage0" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
+      </div>
+      <div
+        class="flex items-center"
+        :class="
+          blok.layoutImageOnPage0 ? 'sm: flex-col lg:flex-row' : 'flex-col'
+        "
+      >
+        <img
+          v-if="blok.imageOnPage0.filename"
+          class="h-60 w-40 m-4"
+          :src="blok.imageOnPage0.filename"
+        />
+        <div class="flex-grow">
+          <div v-for="blok in blok.textOnPage0" :key="blok._uid">
+            <component :is="blok.component" :blok="blok" />
+          </div>
+        </div>
       </div>
     </section>
     <section
       v-if="isPage1"
       :class="{ hidden: isPage2 || isPage3 || isPage4 || isPage5 || isPage6 }"
     >
-      <img
-        v-if="blok.imageOnPage1.filename"
-        class="h-60 w-40 mb-4"
-        :src="blok.imageOnPage1.filename"
-      />
-      <div v-for="blok in blok.textOnPage1" :key="blok._uid">
+      <div v-for="blok in blok.titleOnPage1" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
+      </div>
+      <div
+        class="flex items-center"
+        :class="
+          blok.layoutImageOnPage1 ? 'sm: flex-col lg:flex-row' : 'flex-col'
+        "
+      >
+        <img
+          v-if="blok.imageOnPage1.filename"
+          class="h-60 w-40 m-4"
+          :src="blok.imageOnPage1.filename"
+        />
+        <div class="flex-grow">
+          <div v-for="blok in blok.textOnPage1" :key="blok._uid">
+            <component :is="blok.component" :blok="blok" />
+          </div>
+        </div>
       </div>
     </section>
     <section
       v-if="isPage2"
       :class="{ hidden: isPage3 || isPage4 || isPage5 || isPage6 }"
     >
-      <img
-        v-if="blok.imageOnPage2.filename"
-        class="h-60 w-40 mb-4"
-        :src="blok.imageOnPage2.filename"
-      />
-      <div v-for="blok in blok.textOnPage2" :key="blok._uid">
+      <div v-for="blok in blok.titleOnPage2" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
+      </div>
+      <div
+        class="flex items-center"
+        :class="
+          blok.layoutImageOnPage2 ? 'sm: flex-col lg:flex-row' : 'flex-col'
+        "
+      >
+        <img
+          v-if="blok.imageOnPage2.filename"
+          class="h-60 w-40 m-4"
+          :src="blok.imageOnPage2.filename"
+        />
+        <div class="flex-grow">
+          <div v-for="blok in blok.textOnPage2" :key="blok._uid">
+            <component :is="blok.component" :blok="blok" />
+          </div>
+        </div>
       </div>
     </section>
     <section v-if="isPage3" :class="{ hidden: isPage4 || isPage5 || isPage6 }">
-      <img
-        v-if="blok.imageOnPage3.filename"
-        class="h-60 w-40 mb-4"
-        :src="blok.imageOnPage3.filename"
-      />
-      <div v-for="blok in blok.textOnPage3" :key="blok._uid">
+      <div v-for="blok in blok.titleOnPage3" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
+      </div>
+      <div
+        class="flex items-center"
+        :class="
+          blok.layoutImageOnPage3 ? 'sm: flex-col lg:flex-row' : 'flex-col'
+        "
+      >
+        <img
+          v-if="blok.imageOnPage3.filename"
+          class="h-60 w-40 m-4"
+          :src="blok.imageOnPage3.filename"
+        />
+        <div class="flex-grow">
+          <div v-for="blok in blok.textOnPage3" :key="blok._uid">
+            <component :is="blok.component" :blok="blok" />
+          </div>
+        </div>
       </div>
     </section>
     <section
@@ -59,41 +107,69 @@
       class="flex flex-col"
       :class="{ hidden: isPage5 || isPage6 }"
     >
-      <img
-        v-if="blok.imageOnPage4.filename"
-        class="h-60 w-40 mb-4"
-        :src="blok.imageOnPage4.filename"
-      />
+      <div v-for="blok in blok.titleOnPage4" :key="blok._uid">
+        <component :is="blok.component" :blok="blok" />
+      </div>
       <div
-        class="center"
-        v-for="eachblok in blok.textOnPage4"
-        :key="eachblok._uid"
+        class="flex items-center"
+        :class="
+          blok.layoutImageOnPage4 ? 'sm: flex-col lg:flex-row' : 'flex-col'
+        "
       >
-        <component :is="eachblok.component" :blok="eachblok" />
+        <img
+          v-if="blok.imageOnPage4.filename"
+          class="h-60 w-40 m-4"
+          :src="blok.imageOnPage4.filename"
+        />
+        <div class="flex-grow">
+          <div v-for="blok in blok.textOnPage4" :key="blok._uid">
+            <component :is="blok.component" :blok="blok" />
+          </div>
+        </div>
       </div>
     </section>
     <section v-if="isPage5" :class="{ hidden: isPage6 }">
-      <img
-        v-if="blok.imageOnPage5.filename"
-        class="h-60 w-40 mb-4"
-        :src="blok.imageOnPage5.filename"
-      />
-      <div v-for="eachblok in blok.textOnPage5" :key="eachblok._uid">
-        <component :is="eachblok.component" :blok="eachblok" />
+      <div v-for="blok in blok.titleOnPage5" :key="blok._uid">
+        <component :is="blok.component" :blok="blok" />
+      </div>
+      <div
+        class="flex items-center"
+        :class="
+          blok.layoutImageOnPage5 ? 'sm: flex-col lg:flex-row' : 'flex-col'
+        "
+      >
+        <img
+          v-if="blok.imageOnPage5.filename"
+          class="h-60 w-40 m-4"
+          :src="blok.imageOnPage5.filename"
+        />
+        <div class="flex-grow">
+          <div v-for="blok in blok.textOnPage5" :key="blok._uid">
+            <component :is="blok.component" :blok="blok" />
+          </div>
+        </div>
       </div>
     </section>
     <section v-if="isPage6" class="flex flex-col">
-      <img
-        v-if="blok.imageOnPage6.filename"
-        class="h-60 w-40 mb-4"
-        :src="blok.imageOnPage6.filename"
-      />
+      <div v-for="blok in blok.titleOnPage6" :key="blok._uid">
+        <component :is="blok.component" :blok="blok" />
+      </div>
       <div
-        v-for="eachblok in blok.textOnPage6"
-        :key="eachblok._uid"
-        class="center"
+        class="flex items-center"
+        :class="
+          blok.layoutImageOnPage6 ? 'sm: flex-col lg:flex-row' : 'flex-col'
+        "
       >
-        <component :is="eachblok.component" :blok="eachblok" />
+        <img
+          v-if="blok.imageOnPage6.filename"
+          class="h-60 w-40 m-4"
+          :src="blok.imageOnPage6.filename"
+        />
+        <div class="flex-grow">
+          <div v-for="blok in blok.textOnPage6" :key="blok._uid">
+            <component :is="blok.component" :blok="blok" />
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -146,9 +222,9 @@ export default {
 }
 </script>
 <style scoped>
-section img {
+/* section img {
   margin: 0 auto;
-}
+} */
 nuxt-link {
   background-color: #ec7026;
 }
