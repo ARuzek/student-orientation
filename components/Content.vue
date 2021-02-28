@@ -20,7 +20,7 @@
       >
         <img
           v-if="blok.imageOnPage0.filename"
-          class="h-60 w-40 m-4"
+          class="sm-h-60 sm-w-40 lg-w-100 m-4"
           :src="blok.imageOnPage0.filename"
         />
         <div class="flex-grow">
@@ -45,7 +45,7 @@
       >
         <img
           v-if="blok.imageOnPage1.filename"
-          class="h-60 w-40 m-4"
+          class="sm-h-60 sm-w-40 lg-w-100 m-4"
           :src="blok.imageOnPage1.filename"
         />
         <div class="flex-grow">
@@ -70,7 +70,7 @@
       >
         <img
           v-if="blok.imageOnPage2.filename"
-          class="h-60 w-40 m-4"
+          class="sm-h-60 sm-w-40 lg-w-100 m-4"
           :src="blok.imageOnPage2.filename"
         />
         <div class="flex-grow">
@@ -92,7 +92,7 @@
       >
         <img
           v-if="blok.imageOnPage3.filename"
-          class="h-60 w-40 m-4"
+          class="sm-h-60 sm-w-40 lg-w-100 m-4"
           :src="blok.imageOnPage3.filename"
         />
         <div class="flex-grow">
@@ -118,7 +118,7 @@
       >
         <img
           v-if="blok.imageOnPage4.filename"
-          class="h-60 w-40 m-4"
+          class="sm-h-60 sm-w-40 lg-w-100 m-4"
           :src="blok.imageOnPage4.filename"
         />
         <div class="flex-grow">
@@ -140,7 +140,7 @@
       >
         <img
           v-if="blok.imageOnPage5.filename"
-          class="h-60 w-40 m-4"
+          class="sm-h-60 sm-w-40 lg-w-100 m-4"
           :src="blok.imageOnPage5.filename"
         />
         <div class="flex-grow">
@@ -162,7 +162,7 @@
       >
         <img
           v-if="blok.imageOnPage6.filename"
-          class="h-60 w-40 m-4"
+          class="sm-h-60 sm-w-40 lg-w-100 m-4"
           :src="blok.imageOnPage6.filename"
         />
         <div class="flex-grow">
