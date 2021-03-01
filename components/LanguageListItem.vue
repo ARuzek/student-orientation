@@ -7,16 +7,27 @@
         </h2>
         <menu class="p-0 flex flex-row justify-center">
           <a
-            class="button m-2 w-12 h-9 p-2 rounded-lg"
+            class="cta button m-2 h-9 pl-2 pr-6 text-white rounded-lg"
             @click.prevent="$refs[blok.language].close()"
-            >{{ blok.no }}</a
+          >
+            <img
+              class="inline"
+              src="/icons/keyboard_arrow_left-white-48dp.svg"
+              alt="Do Not Continue in this language"
+            />
+            {{ blok.no }}</a
           >
           <nuxt-link
-            class="button m-2 w-12 h-9 p-2 rounded-lg"
+            class="cta button m-2 h-9 pr-2 pl-6 text-white rounded-lg"
             :to="blok.page"
             @click.native="blok.rtl ? isRtl() : isLtr()"
-            >{{ blok.yes }}</nuxt-link
-          >
+            >{{ blok.yes }}
+            <img
+              class="inline"
+              src="/icons/keyboard_arrow_right-white-48dp.svg"
+              alt="Continue in this language"
+            />
+          </nuxt-link>
         </menu>
       </div>
     </dialog>
@@ -74,6 +85,9 @@ export default {
 .button {
   background-color: #ec7026;
 }
+.cta {
+  min-width: 100px;
+}
 .rtl {
   direction: rtl;
   text-align: right;
@@ -89,5 +103,10 @@ dialog::backdrop {
 dialog {
   width: 100vw;
   max-width: 500px;
+}
+
+a:focus {
+  outline: none;
+  border: 2px solid #000000;
 }
 </style>
