@@ -1,0 +1,208 @@
+<svg id="Firework" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1080">
+  <defs>
+    <style>
+      .redSparkle {
+        fill: none;
+        stroke: #FF000000;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 500;
+        stroke-linecap: round;
+        stroke-width: 8;
+        animation: dashRed .2s linear;
+        animation-delay: 1s;
+
+      }
+
+      .blueSparkle {
+        fill: none;
+        stroke: #0000FF00;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 500;
+        stroke-linecap: round;
+        stroke-width: 8;
+        animation: dashBlue .2s linear;
+        animation-delay: 1.3s;
+      }
+
+      .greenSparkle {
+        fill: none;
+        stroke: #00FF0000;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 500;
+        stroke-linecap: round;
+        stroke-width: 8;
+        animation: dashGreen .2s linear;
+        animation-delay: 1.6s;
+
+      }
+
+      .purpleSparkle {
+        fill: none;
+        stroke: #FF00FF00;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 500;
+        stroke-linecap: round;
+        stroke-width: 8;
+        animation: dashPurple .2s linear;
+        animation-delay: 1.9s;
+
+      }
+
+      .red {
+        fill: red;
+      }
+
+      .blue {
+        fill: blue;
+      }
+
+      .green {
+        fill: green;
+      }
+
+      .purple {
+        fill: purple;
+      }
+
+      @keyframes dashRed {
+        0% {
+          stroke: #FF0000FF stroke-dashoffset: 500;
+        }
+
+        80% {
+          stroke: #FF0000FF
+        }
+
+        100% {
+          stroke-dashoffset: -200;
+          stroke: #FF000000;
+        }
+      }
+
+      @keyframes dashBlue {
+        0% {
+          stroke: #0000FFFF stroke-dashoffset: 500;
+        }
+
+        80% {
+          stroke: #0000FFFF
+        }
+
+        100% {
+          stroke-dashoffset: -200;
+          stroke: #0000FF00;
+        }
+      }
+
+      @keyframes dashGreen {
+        0% {
+          stroke: #00FF00FF stroke-dashoffset: 500;
+        }
+
+        80% {
+          stroke: #00FF00FF
+        }
+
+        100% {
+          stroke-dashoffset: -200;
+          stroke: #00FF0000;
+        }
+      }
+
+      @keyframes dashPurple {
+        0% {
+          stroke: #FF00FFFF stroke-dashoffset: 500;
+        }
+
+        80% {
+          stroke: #FF00FFFF
+        }
+
+        100% {
+          stroke-dashoffset: -200;
+          stroke: #FF00FF00;
+        }
+      }
+    </style>
+  </defs>
+  <g transform="translate(0, -8)">
+    <path id="Drop0" class="redSparkle"
+      d="M532.75,218c5.89,3.79,94.35,62.43,83.65,139.08a101.31,101.31,0,0,1-14.48,39.31" />
+    <path id="Drop1" class="redSparkle"
+      d="M557.52,121.74c6.8-2.06,110.26-31.95,168.25,22.89A105.46,105.46,0,0,1,750,179.44" />
+    <path id="Drop2" class="redSparkle"
+      d="M514.29,96.92c2.87-5.35,47.08-85.62,96.47-72.47,6.86,1.83,15.51,5.91,24.73,15.15" />
+    <path id="Drop3" class="redSparkle"
+      d="M562.89,178.74c7.07,1,113.89,17.43,139.9,90.78a99.74,99.74,0,0,1,5.24,41.3" />
+    <path id="Drop4" class="redSparkle" d="M459,218c-5.83,3.79-93.38,62.43-82.79,139.08a102,102,0,0,0,14.33,39.31" />
+    <path id="Drop5" class="redSparkle"
+      d="M434.5,121.74c-6.73-2.06-109.13-31.95-166.52,22.89a105.45,105.45,0,0,0-24,34.81" />
+    <path id="Drop6" class="redSparkle"
+      d="M477.29,96.92c-2.84-5.35-46.6-85.62-95.48-72.47-6.79,1.83-15.35,5.91-24.47,15.15" />
+    <path id="Drop7" class="redSparkle"
+      d="M429.19,178.74c-7,1-112.72,17.43-138.46,90.78a100.51,100.51,0,0,0-5.19,41.3" />
+    <circle class="red" r="8">
+      <animateMotion dur="1s" repeatCount="1" path="M498.29,1006.19q-2.79-419.7-5.6-839.4" />
+    </circle>
+  </g>
+  <g transform="translate(200, -8) scale(0.5 0.5)">
+    <path id="Drop0" class="blueSparkle"
+      d="M532.75,218c5.89,3.79,94.35,62.43,83.65,139.08a101.31,101.31,0,0,1-14.48,39.31" />
+    <path id="Drop1" class="blueSparkle"
+      d="M557.52,121.74c6.8-2.06,110.26-31.95,168.25,22.89A105.46,105.46,0,0,1,750,179.44" />
+    <path id="Drop2" class="blueSparkle"
+      d="M514.29,96.92c2.87-5.35,47.08-85.62,96.47-72.47,6.86,1.83,15.51,5.91,24.73,15.15" />
+    <path id="Drop3" class="blueSparkle"
+      d="M562.89,178.74c7.07,1,113.89,17.43,139.9,90.78a99.74,99.74,0,0,1,5.24,41.3" />
+    <path id="Drop4" class="blueSparkle" d="M459,218c-5.83,3.79-93.38,62.43-82.79,139.08a102,102,0,0,0,14.33,39.31" />
+    <path id="Drop5" class="blueSparkle"
+      d="M434.5,121.74c-6.73-2.06-109.13-31.95-166.52,22.89a105.45,105.45,0,0,0-24,34.81" />
+    <path id="Drop6" class="blueSparkle"
+      d="M477.29,96.92c-2.84-5.35-46.6-85.62-95.48-72.47-6.79,1.83-15.35,5.91-24.47,15.15" />
+    <path id="Drop7" class="blueSparkle"
+      d="M429.19,178.74c-7,1-112.72,17.43-138.46,90.78a100.51,100.51,0,0,0-5.19,41.3" />
+    <circle class="blue" r="8">
+      <animateMotion dur="1s" begin=".3s;op.end+.3s" repeatCount="1" path="M498.29,1006.19q-2.79-419.7-5.6-839.4" />
+    </circle>
+  </g>
+  <g transform="translate(-100, -8) scale(0.5 0.5)">
+    <path id="Drop0" class="greenSparkle"
+      d="M532.75,218c5.89,3.79,94.35,62.43,83.65,139.08a101.31,101.31,0,0,1-14.48,39.31" />
+    <path id="Drop1" class="greenSparkle"
+      d="M557.52,121.74c6.8-2.06,110.26-31.95,168.25,22.89A105.46,105.46,0,0,1,750,179.44" />
+    <path id="Drop2" class="greenSparkle"
+      d="M514.29,96.92c2.87-5.35,47.08-85.62,96.47-72.47,6.86,1.83,15.51,5.91,24.73,15.15" />
+    <path id="Drop3" class="greenSparkle"
+      d="M562.89,178.74c7.07,1,113.89,17.43,139.9,90.78a99.74,99.74,0,0,1,5.24,41.3" />
+    <path id="Drop4" class="greenSparkle" d="M459,218c-5.83,3.79-93.38,62.43-82.79,139.08a102,102,0,0,0,14.33,39.31" />
+    <path id="Drop5" class="greenSparkle"
+      d="M434.5,121.74c-6.73-2.06-109.13-31.95-166.52,22.89a105.45,105.45,0,0,0-24,34.81" />
+    <path id="Drop6" class="greenSparkle"
+      d="M477.29,96.92c-2.84-5.35-46.6-85.62-95.48-72.47-6.79,1.83-15.35,5.91-24.47,15.15" />
+    <path id="Drop7" class="greenSparkle"
+      d="M429.19,178.74c-7,1-112.72,17.43-138.46,90.78a100.51,100.51,0,0,0-5.19,41.3" />
+    <circle class="green" cy="8" r="8">
+      <animateMotion dur="1s" begin=".6s;op.end+.6s" repeatCount="1" path="M498.29,1006.19q-2.79-419.7-5.6-839.4" />
+    </circle>
+  </g>
+  <g transform="translate(-200, -8)">
+    <path id="Drop0" class="purpleSparkle"
+      d="M532.75,218c5.89,3.79,94.35,62.43,83.65,139.08a101.31,101.31,0,0,1-14.48,39.31" />
+    <path id="Drop1" class="purpleSparkle"
+      d="M557.52,121.74c6.8-2.06,110.26-31.95,168.25,22.89A105.46,105.46,0,0,1,750,179.44" />
+    <path id="Drop2" class="purpleSparkle"
+      d="M514.29,96.92c2.87-5.35,47.08-85.62,96.47-72.47,6.86,1.83,15.51,5.91,24.73,15.15" />
+    <path id="Drop3" class="purpleSparkle"
+      d="M562.89,178.74c7.07,1,113.89,17.43,139.9,90.78a99.74,99.74,0,0,1,5.24,41.3" />
+    <path id="Drop4" class="purpleSparkle" d="M459,218c-5.83,3.79-93.38,62.43-82.79,139.08a102,102,0,0,0,14.33,39.31" />
+    <path id="Drop5" class="purpleSparkle"
+      d="M434.5,121.74c-6.73-2.06-109.13-31.95-166.52,22.89a105.45,105.45,0,0,0-24,34.81" />
+    <path id="Drop6" class="purpleSparkle"
+      d="M477.29,96.92c-2.84-5.35-46.6-85.62-95.48-72.47-6.79,1.83-15.35,5.91-24.47,15.15" />
+    <path id="Drop7" class="purpleSparkle"
+      d="M429.19,178.74c-7,1-112.72,17.43-138.46,90.78a100.51,100.51,0,0,0-5.19,41.3" />
+    <circle class="purple" r="8">
+      <animateMotion dur="1s" begin=".9s;op.end+.9s" repeatCount="1" path="M498.29,1006.19q-2.79-419.7-5.6-839.4" />
+    </circle>
+  </g>
+</svg>
