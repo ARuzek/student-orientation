@@ -1,5 +1,5 @@
 <template>
-  <header class="mx-auto py-8 flex items-center">
+  <header class="mx-auto py-8 flex items-center fixed w-screen bg-white">
     <div class="content-start pl-8">
       <a href="/" class="block w-56 mx-auto">
         <img
