@@ -2,7 +2,7 @@
   <div>
     <dialog :ref="blok.language" class="m-auto">
       <div class="flex justify-center items-center flex-col flex-grow">
-        <h2 class="text-5xl font-bold pb-8">
+        <h2 class="text-3xl font-bold pb-8">
           {{ blok.language }}
         </h2>
         <menu class="p-0 flex flex-row justify-center">

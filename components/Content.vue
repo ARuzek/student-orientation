@@ -1,7 +1,7 @@
 <template>
   <div
     v-editable="blok"
-    class="pb-8 pl-8 pr-8 mb-6 max-w-screen-md my-0 mx-auto mt-16"
+    class="pb-8 pl-8 pr-8 mb-6 max-w-screen-md my-0 mx-auto"
   >
     <section
       v-if="isPage0"

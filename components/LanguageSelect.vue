@@ -2,7 +2,7 @@
 <template>
   <div v-editable="blok" class="pb-8 mb-6 font-bold text-center">
     <h2 class="text-base">{{ blok.subheadline }}</h2>
-    <h1 class="text-5xl">{{ blok.headline }}</h1>
+    <h1 class="text-4xl">{{ blok.headline }}</h1>
     <nav class="max-w-2xl m-auto">
       <ul v-editable="blok">
         <li v-for="blok in blok.list" :key="blok._uid">

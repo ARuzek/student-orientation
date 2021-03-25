@@ -1,15 +1,21 @@
 <template>
   <div class="p-0 flex flex-row justify-between">
-    <nuxt-link :to="from" class="button h-9 pl-2 pr-6 text-center rounded-lg">
+    <nuxt-link
+      :to="from"
+      class="text-xl button h-9 pl-2 pr-6 text-center rounded-lg"
+    >
       <img
         class="inline"
         src="/icons/keyboard_arrow_left-white-48dp.svg"
         alt="Previous Page"
       />
-      {{ blok.previousbutton }}
+      <strong>{{ blok.previousbutton }}</strong>
     </nuxt-link>
-    <nuxt-link :to="to" class="button h-9 pr-2 pl-6 text-center rounded-lg">
-      {{ blok.nextbutton }}
+    <nuxt-link
+      :to="to"
+      class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
+    >
+      <strong>{{ blok.nextbutton }}</strong>
       <img
         class="inline"
         src="/icons/keyboard_arrow_right-white-48dp.svg"

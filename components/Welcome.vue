@@ -1,7 +1,7 @@
 <template>
   <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6" :dir="isRtl()">
     <h2 class="text-base font-bold text-center">{{ blok.subheadline }}</h2>
-    <h1 class="text-5xl font-bold text-center">{{ blok.headline }}</h1>
+    <h1 class="text-4xl font-bold text-center">{{ blok.headline }}</h1>
     <div class="vrview"><div id="vrview"></div></div>
     <p class="mb-6 mt-6 max-w-5xl mx-auto">{{ blok.mission }}</p>
     <p class="mb-6 max-w-5xl mx-auto">
@@ -9,17 +9,17 @@
     </p>
     <p class="mb-6 max-w-5xl mx-auto">{{ blok.audio_instruction }}</p>
     <div class="text-center">
-      <h1 class="text-5xl font-bold mb-6 max-w-5xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6 max-w-5xl mx-auto">
         {{ blok.prompt }}
       </h1>
 
-      <a class="text-white button ml-3 w-12 h-9 p-4 rounded-lg">{{
-        blok.button_previous
-      }}</a>
+      <a class="text-xl text-white button ml-3 w-12 h-9 p-2 rounded-lg"
+        ><strong>{{ blok.button_previous }}</strong></a
+      >
       <a
         href="./principles/"
-        class="text-white button ml-3 w-12 h-9 p-4 rounded-lg"
-        >{{ blok.button_next }}</a
+        class="text-xl text-white button ml-3 w-12 h-9 p-2 rounded-lg"
+        ><strong>{{ blok.button_next }}</strong></a
       >
     </div>
   </div>
