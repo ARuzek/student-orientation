@@ -7,6 +7,11 @@
     <p class="mb-6 max-w-5xl mx-auto">
       {{ blok.interaction_instruction }}
     </p>
+    <img
+      class="object-center bg-white"
+      src="/animations/HowToNext_1_1.gif"
+      alt="example of how to select the next checkbox"
+    />
     <p class="mb-6 max-w-5xl mx-auto">{{ blok.audio_instruction }}</p>
     <div class="text-center">
       <h1 class="text-3xl font-bold mb-6 max-w-5xl mx-auto">
@@ -70,5 +75,9 @@ export default {
   width: 500px;
   height: 500px;
   margin: 0 auto;
+}
+
+img {
+  width: 500px;
 }
 </style>
