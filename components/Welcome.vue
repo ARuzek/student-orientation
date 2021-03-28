@@ -7,12 +7,21 @@
     <p class="mb-6 max-w-5xl mx-auto">
       {{ blok.interaction_instruction }}
     </p>
-    <img
-      class="object-center bg-white"
-      src="/animations/HowToNext_1_1.gif"
-      alt="example of how to select the next checkbox"
-    />
+    <div>
+      <img
+        class="object-center bg-white"
+        src="/animations/HowToNext.gif"
+        alt="example of how to select the next checkbox"
+      />
+    </div>
     <p class="mb-6 max-w-5xl mx-auto">{{ blok.audio_instruction }}</p>
+    <div>
+      <img
+        class=""
+        src="/animations/HowToButton.gif"
+        alt="example of how to select the next checkbox"
+      />
+    </div>
     <div class="text-center">
       <h1 class="text-3xl font-bold mb-6 max-w-5xl mx-auto">
         {{ blok.prompt }}
@@ -58,8 +67,8 @@ export default {
       // eslint-disable-next-line no-undef
       const vrView = new VRView.Player('#vrview', {
         image: this.blok.vrImage.filename,
-        width: '500px',
-        height: '500px',
+        width: '100%',
+        height: '100%',
       })
       // eslint-disable-next-line no-console
       console.log(vrView)
@@ -71,13 +80,23 @@ export default {
 .button {
   background-color: #ec7026;
 }
+
+@media only screen and (max-width: 600px) {
+  #vrview {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+  }
+}
+
 #vrview {
+  margin: 0 auto;
   width: 500px;
   height: 500px;
-  margin: 0 auto;
 }
 
 img {
   width: 500px;
+  margin: 0 auto;
 }
 </style>

@@ -43,7 +43,7 @@ export default {
         case 'Rules':
           return './health'
         case 'Health':
-          return '../complete'
+          return './complete'
         // code block
       }
       return true
@@ -55,7 +55,7 @@ export default {
         case 'Rules':
           return './principles'
         case 'Health':
-          return '../rules'
+          return './rules'
         // code block
       }
       return true
