@@ -14,6 +14,7 @@
               class="inline"
               src="/icons/keyboard_arrow_left-white-48dp.svg"
               alt="Do Not Continue in this language"
+              @mouseover="$refs[blok.language + ' no audio'].play()"
             />
             {{ blok.no }}</a
           >
@@ -26,24 +27,35 @@
               class="inline"
               src="/icons/keyboard_arrow_right-white-48dp.svg"
               alt="Continue in this language"
+              @mouseover="$refs[blok.language + ' yes audio'].play()"
             />
           </nuxt-link>
         </menu>
       </div>
     </dialog>
+
+    <audio :ref="blok.language + ' audio'" class="hidden">
+      <source :src="blok.audio.filename" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio :ref="blok.language + ' yes audio'" class="hidden">
+      <source :src="blok.audio.filename" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio :ref="blok.language + ' no audio'" class="hidden">
+      <source :src="blok.audio.filename" />
+      Your browser does not support the audio element.
+    </audio>
     <a
       v-editable="blok"
       class="flex items-center"
       @click.prevent="$refs[blok.language].showModal()"
     >
-      <audio controls class="hidden">
-        <source :src="blok.audio.filename" />
-        Your browser does not support the audio element.
-      </audio>
       <img
         class="button ml-3 w-12 h-9 p-2 rounded-lg"
         src="/icons/volume_up-white-48dp.svg"
         alt="listen to audio"
+        @click.prevent="$refs[blok.language + ' audio'].play()"
       />
       <p :class="{ rtl: blok.rtl }" class="flex-grow text-left pl-6">
         {{ blok.language }}
