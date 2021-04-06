@@ -49,7 +49,7 @@ header {
   transition: margin-right 300ms;
 }
 .move {
-  margin-right: calc(300px - 0.75rem);
+  margin-right: calc(300px + 0.4rem);
   transition: margin-right 300ms;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ invisible: !$store.state.audio }" v-editable="blok">
+  <div v-editable="blok" :class="{ invisible: !$store.state.audio }">
     <audio controls>
       <source :src="blok.audio.filename" />
       Your browser does not support the audio element.
@@ -17,6 +17,7 @@ export default {
   },
 }
 </script>
+
 <style scoped>
 div {
   position: absolute;
@@ -31,5 +32,10 @@ audio {
   border-radius: 0.5rem;
   background-color: #ec7026;
   transform: scale(0.9);
+}
+
+audio:focus {
+  outline: none;
+  border: none;
 }
 </style>
