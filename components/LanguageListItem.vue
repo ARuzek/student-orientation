@@ -39,11 +39,11 @@
       Your browser does not support the audio element.
     </audio>
     <audio :ref="blok.language + ' yes audio'" class="hidden">
-      <source :src="blok.audio.filename" />
+      <source :src="blok.audioYes.filename" />
       Your browser does not support the audio element.
     </audio>
     <audio :ref="blok.language + ' no audio'" class="hidden">
-      <source :src="blok.audio.filename" />
+      <source :src="blok.audioNo.filename" />
       Your browser does not support the audio element.
     </audio>
     <a
