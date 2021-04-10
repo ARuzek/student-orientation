@@ -34,23 +34,23 @@
       </div>
     </dialog>
 
-    <audio :ref="blok.language + ' audio'" class="hidden">
-      <source :src="blok.audio.filename" />
-      Your browser does not support the audio element.
-    </audio>
-    <audio :ref="blok.language + ' yes audio'" class="hidden">
-      <source :src="blok.audio.filename" />
-      Your browser does not support the audio element.
-    </audio>
-    <audio :ref="blok.language + ' no audio'" class="hidden">
-      <source :src="blok.audio.filename" />
-      Your browser does not support the audio element.
-    </audio>
     <a
       v-editable="blok"
       class="flex items-center"
       @click.prevent="$refs[blok.language].showModal()"
     >
+      <audio :ref="blok.language + ' audio'" class="hidden">
+        <source :src="blok.audio.filename" />
+        Your browser does not support the audio element.
+      </audio>
+      <audio :ref="blok.language + ' yes audio'" class="hidden">
+        <source src="/audio/EN_Yes.mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <audio :ref="blok.language + ' no audio'" class="hidden">
+        <source src="/audio/EN_No.mp3" />
+        Your browser does not support the audio element.
+      </audio>
       <img
         class="button ml-3 w-12 h-9 p-2 rounded-lg"
         src="/icons/volume_up-white-48dp.svg"

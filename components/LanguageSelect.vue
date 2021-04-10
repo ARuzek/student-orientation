@@ -31,4 +31,8 @@ li {
   padding: 1rem 0rem;
   margin: 1rem;
 }
+
+li:hover {
+  background: #e7e7e7;
+}
 </style>
