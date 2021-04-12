@@ -1,4 +1,6 @@
-# student-orientation
+# Student Orientation for Still I Rise 
+
+## About the Application
 
 ## Build Setup
 
