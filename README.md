@@ -1,20 +1,13 @@
-# student-orientation
+# Student Orientation for Still I Rise 
 
-## Build Setup
+The goal of this project is to provide an accessible orientation resource for new students arriving at Still I Rise (NGO) international schools and youth centers for refugees. The student orientation is multilingual and incorporates audio and visual cues to aid accessibility. 
 
-```bash
-# install dependencies
-$ npm install
+## About the Application Technology
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+This is a progressive web application (PWA) with a Nuxt-powered Vue Framework as front-end and a Storyblok content management system (CMS). The application is built through an automated build pipeline from GitHub to the Netlify host provider with a free domain name at http://still-i-rise-student-orientation.netlify.app/
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+## How to Get Started
 
-# generate static project
-$ npm run generate
-```
+If you are reading this, you're either a content administrator or a web developer for the project. To view the complete documentation for the project, head over to the GitHub repository for the project and select the Wiki tab https://github.com/ARuzek/student-orientation/wiki
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
