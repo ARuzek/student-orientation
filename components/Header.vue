@@ -4,6 +4,7 @@
       <a href="/" class="block w-56 mx-auto">
         <img
           src="https://a.storyblok.com/f/98561/x/d36d4c52a8/logo-stillirise.svg"
+          alt="Still I Rise Logo"
         />
       </a>
     </div>
@@ -13,6 +14,8 @@
           class="button m-2 w-12 h-9 p-2 rounded-lg"
           src="/icons/language-white-48dp.svg"
           alt="change language"
+          height="2.25rem"
+          width="3rem"
         />
       </a>
       <a href="/">
@@ -20,6 +23,8 @@
           class="button m-2 w-12 h-9 p-2 rounded-lg"
           src="/icons/volume_up-white-48dp.svg"
           alt="listen to audio"
+          height="2.25rem"
+          width="3rem"
           :class="{ move: $store.state.audio }"
           @click.prevent="audioShown"
         />

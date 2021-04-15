@@ -8,7 +8,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Still I Rise Student Orientation',
+      },
+      { name: 'theme-color', content: '#ec7026' },
     ],
     script: [
       { src: 'https://storage.googleapis.com/vrview/2.0/build/vrview.min.js' },
@@ -43,6 +48,12 @@ export default {
     '@nuxtjs/pwa',
   ],
 
+  pwa: {
+    meta: {
+      /* meta options */
+      theme_color: '#ec7026',
+    },
+  },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     [
