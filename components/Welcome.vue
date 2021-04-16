@@ -27,9 +27,6 @@
         {{ blok.prompt }}
       </h1>
 
-      <a class="text-xl text-white button ml-3 w-12 h-9 p-2 rounded-lg"
-        ><strong>{{ blok.button_previous }}</strong></a
-      >
       <a
         href="./principles/"
         class="text-xl text-white button ml-3 w-12 h-9 p-2 rounded-lg"
