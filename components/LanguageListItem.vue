@@ -7,7 +7,7 @@
         </h2>
         <menu class="p-0 flex flex-row justify-center">
           <a
-            class="cta button m-2 h-9 pl-2 pr-6 text-white rounded-lg"
+            class="cta button m-2 h-9 text-white rounded-lg"
             @click.prevent="$refs[blok.language].close()"
           >
             <img
@@ -63,7 +63,7 @@
       <img
         class=""
         src="/icons/keyboard_arrow_right-black-48dp.svg"
-        alt="Continue in this language"
+        alt="Select this language"
       />
     </a>
   </div>
@@ -104,6 +104,13 @@ export default {
   direction: rtl;
   text-align: right;
 }
+img[alt='Do Not Continue in this language'] {
+  margin-left: -20px;
+}
+img[alt='Continue in this language'] {
+  margin-right: -20px;
+}
+
 dialog::backdrop {
   position: fixed;
   top: 0px;

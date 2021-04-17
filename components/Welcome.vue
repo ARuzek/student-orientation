@@ -67,9 +67,24 @@ export default {
         width: '100%',
         height: '100%',
       })
+
       // eslint-disable-next-line no-console
-      console.log(vrView)
     },
+
+    // this.vrView.on('ready',function(){
+    //  this.vrView.addHotspot('dining-room', {
+    //     pitch: 30, // In degrees. Up is positive.
+    //     yaw: 20, // In degrees. To the right is positive.
+    //     radius: 5, // Radius of the circular target in meters.
+    //     distance: 2, // Distance of target from camera in meters.
+    //   })
+    // },
+    //   vrView.on('click', function (event) {
+    //     if (event.id === 'dining-room') {
+    //       // Handle hotspot click.
+    //       console.log('hotspot clicked')
+    //     }
+    //   })
   },
 }
 </script>
