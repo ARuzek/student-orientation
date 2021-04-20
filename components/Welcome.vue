@@ -67,8 +67,8 @@ export default {
         width: '100%',
         height: '100%',
       })
-
-      // eslint-disable-next-line no-console
+      // eslint-disable-ext-line no-console
+      console.log(vrView)
     },
 
     // this.vrView.on('ready',function(){

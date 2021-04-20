@@ -2,10 +2,7 @@
   <header class="mx-auto py-8 flex items-center w-screen">
     <div class="content-start pl-8">
       <a href="/" class="block w-24 mx-auto sm:w-56">
-        <img
-          src="https://a.storyblok.com/f/98561/x/d36d4c52a8/logo-stillirise.svg"
-          alt="Still I Rise Logo"
-        />
+        <img src="/logo-stillirise.svg" alt="Still I Rise Logo" />
       </a>
     </div>
     <div class="flex pr-8">
