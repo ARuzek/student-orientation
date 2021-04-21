@@ -11,6 +11,7 @@
       />
       <strong>{{ blok.previousbutton }}</strong>
     </nuxt-link>
+
     <nuxt-link
       :to="to"
       class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
