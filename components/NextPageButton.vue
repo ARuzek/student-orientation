@@ -44,7 +44,7 @@ export default {
         case 'Rules':
           return './health'
         case 'Health':
-          return './complete'
+          return './complete/'
         // code block
       }
       return true
