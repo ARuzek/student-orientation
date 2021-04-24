@@ -5,7 +5,7 @@
         <img src="/logo-stillirise.svg" alt="Still I Rise Logo" />
       </a>
     </div>
-    <div class="flex pr-8">
+    <div class="flex pr-8" :class="{ hidden: $route.path == '/' }">
       <a href="/">
         <img
           class="button m-2 w-12 h-9 p-2 rounded-lg"
