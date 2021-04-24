@@ -5,6 +5,7 @@
   >
     <section
       v-if="isPage0"
+      class="mb-12"
       :class="{
         'md:hidden':
           isPage1 || isPage2 || isPage3 || isPage4 || isPage5 || isPage6,
@@ -33,6 +34,7 @@
     </section>
     <section
       v-if="isPage1"
+      class="mb-12"
       :class="{
         'md:hidden': isPage2 || isPage3 || isPage4 || isPage5 || isPage6,
       }"
@@ -60,6 +62,7 @@
     </section>
     <section
       v-if="isPage2"
+      class="mb-12"
       :class="{ 'md:hidden': isPage3 || isPage4 || isPage5 || isPage6 }"
     >
       <div v-for="blok in blok.titleOnPage2" :key="blok._uid">
@@ -85,6 +88,7 @@
     </section>
     <section
       v-if="isPage3"
+      class="mb-12"
       :class="{ 'md:hidden': isPage4 || isPage5 || isPage6 }"
     >
       <div v-for="blok in blok.titleOnPage3" :key="blok._uid">
@@ -110,7 +114,7 @@
     </section>
     <section
       v-if="isPage4"
-      class="flex flex-col"
+      class="flex flex-col mb-12"
       :class="{ 'md:hidden': isPage5 || isPage6 }"
     >
       <div v-for="blok in blok.titleOnPage4" :key="blok._uid">
@@ -134,7 +138,7 @@
         </div>
       </div>
     </section>
-    <section v-if="isPage5" :class="{ 'md:hidden': isPage6 }">
+    <section v-if="isPage5" class="mb-12" :class="{ 'md:hidden': isPage6 }">
       <div v-for="blok in blok.titleOnPage5" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>
@@ -156,7 +160,7 @@
         </div>
       </div>
     </section>
-    <section v-if="isPage6" class="flex flex-col">
+    <section v-if="isPage6" class="mb-12 flex flex-col">
       <div v-for="blok in blok.titleOnPage6" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>

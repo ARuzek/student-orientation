@@ -1,6 +1,6 @@
 <template>
   <div>
-    <dialog :ref="blok.language" class="m-auto">
+    <dialog v-if="dialogSupported" :ref="blok.language" class="m-auto">
       <div class="flex justify-center items-center flex-col flex-grow">
         <h2 class="text-3xl font-bold pb-8">
           {{ blok.language }}
@@ -35,9 +35,10 @@
     </dialog>
 
     <a
+      v-if="dialogSupported"
       v-editable="blok"
       class="flex items-center"
-      @click.prevent="$refs[blok.language].showModal()"
+      @click.prevent="checkForDialogSupport($refs[blok.language])"
     >
       <audio :ref="blok.language + ' audio'" class="hidden">
         <source :src="blok.audio.filename" />
@@ -66,6 +67,40 @@
         alt="Select this language"
       />
     </a>
+    <nuxt-link
+      v-else
+      v-editable="blok"
+      :to="blok.page"
+      class="flex items-center"
+      @click.prevent="blok.rtl ? isRtl() : isLtr()"
+    >
+      <audio :ref="blok.language + ' audio'" class="hidden">
+        <source :src="blok.audio.filename" />
+        Your browser does not support the audio element.
+      </audio>
+      <audio :ref="blok.language + ' yes audio'" class="hidden">
+        <source src="/audio/EN_Yes.mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <audio :ref="blok.language + ' no audio'" class="hidden">
+        <source src="/audio/EN_No.mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <img
+        class="button ml-3 w-12 h-9 p-2 rounded-lg"
+        src="/icons/volume_up-white-48dp.svg"
+        alt="listen to audio"
+        @click.prevent="$refs[blok.language + ' audio'].play()"
+      />
+      <p :class="{ rtl: blok.rtl }" class="flex-grow text-left pl-6">
+        {{ blok.language }}
+      </p>
+      <img
+        class=""
+        src="/icons/keyboard_arrow_right-black-48dp.svg"
+        alt="Select this language"
+      />
+    </nuxt-link>
   </div>
 </template>
 
@@ -76,6 +111,20 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data() {
+    return {
+      dialogSupported: true,
+    }
+  },
+  mounted() {
+    try {
+      this.$refs[this.blok.language].close()
+      this.dialogSupported = true
+    } catch {
+      console.log('dialog is not supported')
+      this.dialogSupported = false
+    }
   },
   methods: {
     isRtl() {
@@ -89,6 +138,14 @@ export default {
         type: 'setRtl',
         isRtl: false,
       })
+    },
+    checkForDialogSupport(langaugeSelection) {
+      try {
+        langaugeSelection.showModal()
+      } catch {
+        console.log('dialog is not supported')
+        this.dialogSupported = false
+      }
     },
   },
 }

@@ -9,14 +9,14 @@
         src="/icons/keyboard_arrow_left-white-48dp.svg"
         alt="Previous Page"
       />
-      <strong>{{ blok.previousbutton }}</strong>
+      <strong class="hidden sm:inline">{{ blok.previousbutton }}</strong>
     </nuxt-link>
 
     <nuxt-link
       :to="to"
       class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
     >
-      <strong>{{ blok.nextbutton }}</strong>
+      <strong class="hidden sm:inline">{{ blok.nextbutton }}</strong>
       <img
         class="inline"
         src="/icons/keyboard_arrow_right-white-48dp.svg"
