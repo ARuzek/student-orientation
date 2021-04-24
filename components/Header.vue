@@ -50,8 +50,17 @@ header {
   margin-right: 0;
   transition: margin-right 300ms;
 }
-.move {
-  margin-right: calc(300px + 0.4rem);
-  transition: margin-right 300ms;
+
+@media only screen and (max-width: 640px) {
+  .move {
+    margin-right: 0;
+    transition: margin-right 300ms;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .move {
+    margin-right: calc(300px + 0.4rem);
+    transition: margin-right 300ms;
+  }
 }
 </style>

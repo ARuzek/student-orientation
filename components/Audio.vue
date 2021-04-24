@@ -19,12 +19,23 @@ export default {
 </script>
 
 <style scoped>
-div {
-  position: absolute;
-  top: 2.5rem;
-  right: 2rem;
-  background-color: #ec7026;
-  border-radius: 0.5rem;
+@media only screen and (max-width: 640px) {
+  div {
+    position: absolute;
+    top: 5.5rem;
+    right: 2rem;
+    background-color: #ec7026;
+    border-radius: 0.5rem;
+  }
+}
+@media only screen and (min-width: 641px) {
+  div {
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    background-color: #ec7026;
+    border-radius: 0.5rem;
+  }
 }
 audio {
   width: 300px;
