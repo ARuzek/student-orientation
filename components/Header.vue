@@ -15,14 +15,23 @@
           width="3rem"
         />
       </a>
-      <a href="/">
+      <a v-if="this.$store.state.audio" href="/">
         <img
           class="button m-2 w-12 h-9 p-2 rounded-lg"
           src="/icons/volume_up-white-48dp.svg"
           alt="listen to audio"
           height="2.25rem"
           width="3rem"
-          :class="{ move: $store.state.audio }"
+          @click.prevent="audioShown"
+        />
+      </a>
+      <a v-else href="/">
+        <img
+          class="button m-2 w-12 h-9 p-2 rounded-lg"
+          src="/icons/volume_off-white-48dp.svg"
+          alt="listen to audio"
+          height="2.25rem"
+          width="3rem"
           @click.prevent="audioShown"
         />
       </a>
@@ -45,22 +54,12 @@ export default {
   background-color: #ec7026;
 }
 
+.button:hover {
+  background-color: #c55d21;
+}
+
 header {
   justify-content: space-between;
   margin-right: 0;
-  transition: margin-right 300ms;
-}
-
-@media only screen and (max-width: 640px) {
-  .move {
-    margin-right: 0;
-    transition: margin-right 300ms;
-  }
-}
-@media only screen and (min-width: 641px) {
-  .move {
-    margin-right: calc(300px + 0.4rem);
-    transition: margin-right 300ms;
-  }
 }
 </style>
