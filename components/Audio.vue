@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" :class="{ invisible: !$store.state.audio }">
-    <audio controls>
+    <audio :ref="blok.audio.title">
       <source :src="blok.audio.filename" />
       Your browser does not support the audio element.
     </audio>
@@ -13,6 +13,20 @@ export default {
     blok: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    audio() {
+      return this.$store.state.audio
+    },
+  },
+  watch: {
+    audio(newValue, oldValue) {
+      if (newValue === true) {
+        this.$refs[this.blok.audio.title].play()
+      } else {
+        this.$refs[this.blok.audio.title].pause()
+      }
     },
   },
 }

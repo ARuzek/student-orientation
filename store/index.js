@@ -35,7 +35,7 @@ export const mutations = {
   setHealth(state, payload) {
     state.Health[payload.itemIndex] = payload.isChecked
   },
-  setAudio(state, payload) {
+  setAudio(state) {
     state.audio = !state.audio
   },
   setRtl(state, payload) {
