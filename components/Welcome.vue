@@ -2,7 +2,7 @@
   <div v-editable="blok" class="pb-8 pl-8 pr-8 mb-6" :dir="isRtl()">
     <h2 class="text-base font-bold text-center">{{ blok.subheadline }}</h2>
     <h1 class="text-4xl font-bold text-center">{{ blok.headline }}</h1>
-    <div class="vrview"><div id="vrview"></div></div>
+    <div class="sm:block hidden vrview"><div id="vrview"></div></div>
     <p class="mb-6 mt-6 max-w-5xl mx-auto">{{ blok.mission }}</p>
     <p class="mb-6 max-w-5xl mx-auto">
       {{ blok.interaction_instruction }}
@@ -91,14 +91,6 @@ export default {
 <style scoped>
 .button {
   background-color: #ec7026;
-}
-
-@media only screen and (max-width: 600px) {
-  #vrview {
-    margin: 0 auto;
-    width: 300px;
-    height: 300px;
-  }
 }
 
 #vrview {
