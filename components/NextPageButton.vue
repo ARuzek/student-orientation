@@ -6,7 +6,11 @@
     >
       <img
         class="inline"
-        src="/icons/keyboard_arrow_left-white-48dp.svg"
+        :src="
+          this.$store.state.rtl
+            ? '/icons/keyboard_arrow_left-white-48dp.svg'
+            : '/icons/keyboard_arrow_right-white-48dp.svg'
+        "
         alt="Previous Page"
       />
       <strong class="hidden sm:inline">{{ blok.previousbutton }}</strong>
@@ -19,7 +23,11 @@
       <strong class="hidden sm:inline">{{ blok.nextbutton }}</strong>
       <img
         class="inline"
-        src="/icons/keyboard_arrow_right-white-48dp.svg"
+        :src="
+          this.$store.state.rtl
+            ? '/icons/keyboard_arrow_right-white-48dp.svg'
+            : '/icons/keyboard_arrow_left-white-48dp.svg'
+        "
         alt="Next Page"
       />
     </nuxt-link>
