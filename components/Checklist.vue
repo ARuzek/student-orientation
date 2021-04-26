@@ -30,47 +30,7 @@ export default {
       default: 'unknown',
     },
   },
-  mounted() {
-    if (window.innerWidth < 640) {
-      console.log('mounted in a small screen')
-      const page = 'set' + this.whichPage
-      this.$store.commit({
-        type: page,
-        itemIndex: 'page0',
-        isChecked: true,
-      })
-      this.$store.commit({
-        type: page,
-        itemIndex: 'page1',
-        isChecked: true,
-      })
-      this.$store.commit({
-        type: page,
-        itemIndex: 'page2',
-        isChecked: true,
-      })
-      this.$store.commit({
-        type: page,
-        itemIndex: 'page3',
-        isChecked: true,
-      })
-      this.$store.commit({
-        type: page,
-        itemIndex: 'page4',
-        isChecked: true,
-      })
-      this.$store.commit({
-        type: page,
-        itemIndex: 'page5',
-        isChecked: true,
-      })
-      this.$store.commit({
-        type: page,
-        itemIndex: 'page6',
-        isChecked: true,
-      })
-    }
-  },
+
   methods: {
     // when a list item is checked, the page with the list on it is updated in the Vuex store database
     areAnyChecked(index) {

@@ -3,14 +3,7 @@
     v-editable="blok"
     class="pb-8 pl-8 pr-8 mb-6 max-w-screen-md my-0 mx-auto"
   >
-    <section
-      v-if="isPage0"
-      class="mb-12"
-      :class="{
-        'md:hidden':
-          isPage1 || isPage2 || isPage3 || isPage4 || isPage5 || isPage6,
-      }"
-    >
+    <section v-if="onPage0()" class="mb-12">
       <div v-for="blok in blok.titleOnPage0" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>
@@ -31,14 +24,28 @@
           </div>
         </div>
       </div>
+      <div class="p-0 sm:hidden flex flex-row justify-between">
+        <a class="text-xl button disabled h-9 pl-2 pr-6 text-center rounded-lg">
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_left-white-48dp.svg"
+            alt="Previous Page"
+          />
+        </a>
+
+        <a
+          class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
+          @click.prevent="next(0)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_right-white-48dp.svg"
+            alt="Next Page"
+          />
+        </a>
+      </div>
     </section>
-    <section
-      v-if="isPage1"
-      class="mb-12"
-      :class="{
-        'md:hidden': isPage2 || isPage3 || isPage4 || isPage5 || isPage6,
-      }"
-    >
+    <section v-if="onPage1()" class="mb-12">
       <div v-for="blok in blok.titleOnPage1" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>
@@ -59,12 +66,31 @@
           </div>
         </div>
       </div>
+      <div class="p-0 sm:hidden flex flex-row justify-between">
+        <a
+          class="text-xl button h-9 pl-2 pr-6 text-center rounded-lg"
+          @click.prevent="back(1)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_left-white-48dp.svg"
+            alt="Previous Page"
+          />
+        </a>
+
+        <a
+          class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
+          @click.prevent="next(1)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_right-white-48dp.svg"
+            alt="Next Page"
+          />
+        </a>
+      </div>
     </section>
-    <section
-      v-if="isPage2"
-      class="mb-12"
-      :class="{ 'md:hidden': isPage3 || isPage4 || isPage5 || isPage6 }"
-    >
+    <section v-if="onPage2()" class="mb-12">
       <div v-for="blok in blok.titleOnPage2" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>
@@ -85,12 +111,31 @@
           </div>
         </div>
       </div>
+      <div class="p-0 sm:hidden flex flex-row justify-between">
+        <a
+          class="text-xl button h-9 pl-2 pr-6 text-center rounded-lg"
+          @click.prevent="back(2)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_left-white-48dp.svg"
+            alt="Previous Page"
+          />
+        </a>
+
+        <a
+          class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
+          @click.prevent="next(2)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_right-white-48dp.svg"
+            alt="Next Page"
+          />
+        </a>
+      </div>
     </section>
-    <section
-      v-if="isPage3"
-      class="mb-12"
-      :class="{ 'md:hidden': isPage4 || isPage5 || isPage6 }"
-    >
+    <section v-if="onPage3()" class="mb-12">
       <div v-for="blok in blok.titleOnPage3" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>
@@ -111,12 +156,31 @@
           </div>
         </div>
       </div>
+      <div class="p-0 sm:hidden flex flex-row justify-between">
+        <a
+          class="text-xl button h-9 pl-2 pr-6 text-center rounded-lg"
+          @click.prevent="back(3)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_left-white-48dp.svg"
+            alt="Previous Page"
+          />
+        </a>
+
+        <a
+          class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
+          @click.prevent="next(3)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_right-white-48dp.svg"
+            alt="Next Page"
+          />
+        </a>
+      </div>
     </section>
-    <section
-      v-if="isPage4"
-      class="flex flex-col mb-12"
-      :class="{ 'md:hidden': isPage5 || isPage6 }"
-    >
+    <section v-if="onPage4()" class="flex flex-col mb-12">
       <div v-for="blok in blok.titleOnPage4" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>
@@ -137,8 +201,33 @@
           </div>
         </div>
       </div>
+
+      <!--If the you have more than 5 pages, uncomment this commented section-->
+      <!-- <div class="p-0 sm:hidden flex flex-row justify-between">
+        <a
+          class="text-xl button h-9 pl-2 pr-6 text-center rounded-lg"
+          @click.prevent="back(4)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_left-white-48dp.svg"
+            alt="Previous Page"
+          />
+        </a>
+
+        <a
+          class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
+          @click.prevent="next(4)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_right-white-48dp.svg"
+            alt="Next Page"
+          />
+        </a>
+      </div> -->
     </section>
-    <section v-if="isPage5" class="mb-12" :class="{ 'md:hidden': isPage6 }">
+    <section v-if="onPage5()" class="mb-12">
       <div v-for="blok in blok.titleOnPage5" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>
@@ -159,8 +248,31 @@
           </div>
         </div>
       </div>
+      <div class="p-0 sm:hidden flex flex-row justify-between">
+        <a
+          class="text-xl button h-9 pl-2 pr-6 text-center rounded-lg"
+          @click.prevent="back(5)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_left-white-48dp.svg"
+            alt="Previous Page"
+          />
+        </a>
+
+        <a
+          class="text-xl button h-9 pr-2 pl-6 text-center rounded-lg"
+          @click.prevent="next(5)"
+        >
+          <img
+            class="inline"
+            src="/icons/keyboard_arrow_right-white-48dp.svg"
+            alt="Next Page"
+          />
+        </a>
+      </div>
     </section>
-    <section v-if="isPage6" class="mb-12 flex flex-col">
+    <section v-if="onPage6()" class="mb-12 flex flex-col">
       <div v-for="blok in blok.titleOnPage6" :key="blok._uid">
         <component :is="blok.component" :blok="blok" />
       </div>
@@ -198,6 +310,7 @@ export default {
       default: 'Principles',
     },
   },
+
   computed: {
     // isPage computations find the page of content that should display based on 1. whichPage we're displaying content on and 2. whether the checkbox for the content page is checked
     isPage0() {
@@ -229,6 +342,128 @@ export default {
       return this.$store.state[this.whichPage].page6
     },
   },
+  methods: {
+    onPage0() {
+      if (
+        !this.isPage1 &&
+        !this.isPage2 &&
+        !this.isPage3 &&
+        !this.isPage4 &&
+        !this.isPage5 &&
+        !this.isPage6
+      ) {
+        return true
+      }
+      return false
+    },
+    onPage1() {
+      if (
+        this.isPage1 &&
+        !this.isPage2 &&
+        !this.isPage3 &&
+        !this.isPage4 &&
+        !this.isPage5 &&
+        !this.isPage6
+      ) {
+        return true
+      }
+      return false
+    },
+    onPage2() {
+      if (
+        this.isPage1 &&
+        this.isPage2 &&
+        !this.isPage3 &&
+        !this.isPage4 &&
+        !this.isPage5 &&
+        !this.isPage6
+      ) {
+        return true
+      }
+      return false
+    },
+    onPage3() {
+      if (
+        this.isPage1 &&
+        this.isPage2 &&
+        this.isPage3 &&
+        !this.isPage4 &&
+        !this.isPage5 &&
+        !this.isPage6
+      ) {
+        return true
+      }
+      return false
+    },
+    onPage4() {
+      if (
+        this.isPage1 &&
+        this.isPage2 &&
+        this.isPage3 &&
+        this.isPage4 &&
+        !this.isPage5 &&
+        !this.isPage6
+      ) {
+        return true
+      }
+      return false
+    },
+    onPage5() {
+      if (
+        this.isPage1 &&
+        this.isPage2 &&
+        this.isPage3 &&
+        this.isPage4 &&
+        this.isPage5 &&
+        !this.isPage6
+      ) {
+        return true
+      }
+      return false
+    },
+    onPage6() {
+      if (
+        this.isPage1 &&
+        this.isPage2 &&
+        this.isPage3 &&
+        this.isPage4 &&
+        this.isPage5 &&
+        this.isPage6
+      ) {
+        return true
+      }
+      return false
+    },
+    // when a list item is checked, the page with the list on it is updated in the Vuex store database
+    next(thisPage) {
+      const nextPage = thisPage + 1
+      const page = 'set' + this.whichPage
+      const item = 'page' + nextPage
+      this.$store.commit({
+        type: page,
+        itemIndex: item,
+        isChecked: true,
+      })
+      return true
+    },
+    back(thisPage) {
+      const previousPage = thisPage - 1
+      const page = 'set' + this.whichPage
+      const item = 'page' + previousPage
+      const back = 'page' + thisPage
+      this.$store.commit({
+        type: page,
+        itemIndex: item,
+        isChecked: true,
+      })
+      this.$store.commit({
+        type: page,
+        itemIndex: back,
+        isChecked: false,
+      })
+      return true
+    },
+  },
 }
 </script>
 <style scoped>
@@ -237,6 +472,14 @@ export default {
 } */
 nuxt-link {
   background-color: #ec7026;
+}
+.button {
+  background-color: #ec7026;
+  color: white;
+}
+
+.disabled {
+  background-color: #d1d1d1;
 }
 .center:last-of-type {
   margin: 0 auto;
