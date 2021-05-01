@@ -91,5 +91,6 @@ img {
 input {
   height: 0px;
   width: 0px;
+  visibility: hidden;
 }
 </style>

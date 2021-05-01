@@ -98,8 +98,8 @@
         {{ blok.language }}
       </p>
       <img
-        height="36"
-        width="36"
+        height="48"
+        width="48"
         src="/icons/keyboard_arrow_right-black-48dp.svg"
         alt="Select this language"
       />
