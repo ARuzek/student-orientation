@@ -86,7 +86,7 @@
         <source src="/audio/EN_No.mp3" />
         Your browser does not support the audio element.
       </audio>
-      <img
+      <nuxt-img
         width="3rem"
         height="2.25rem"
         class="button ml-3 w-12 h-9 p-2 rounded-lg"
@@ -97,7 +97,7 @@
       <p :class="{ rtl: blok.rtl }" class="flex-grow text-left pl-6">
         {{ blok.language }}
       </p>
-      <img
+      <nuxt-img
         height="48px"
         width="48px"
         class=""
