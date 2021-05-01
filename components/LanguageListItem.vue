@@ -53,7 +53,9 @@
         Your browser does not support the audio element.
       </audio>
       <img
-        class="button ml-3 w-12 h-9 p-2 rounded-lg"
+        width="48"
+        height="36"
+        class="button ml-3 p-2 rounded-lg"
         src="/icons/volume_up-white-48dp.svg"
         alt="listen to audio"
         @click.prevent="$refs[blok.language + ' audio'].play()"
@@ -62,7 +64,8 @@
         {{ blok.language }}
       </p>
       <img
-        class=""
+        height="48"
+        width="48"
         src="/icons/keyboard_arrow_right-black-48dp.svg"
         alt="Select this language"
       />
