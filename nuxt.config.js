@@ -16,7 +16,10 @@ export default {
       { name: 'theme-color', content: '#ec7026' },
     ],
     script: [
-      { src: 'https://storage.googleapis.com/vrview/2.0/build/vrview.min.js' },
+      {
+        src: 'https://storage.googleapis.com/vrview/2.0/build/vrview.min.js',
+        defer: true,
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'icons/favicon-32x32.png' },
