@@ -87,6 +87,8 @@
         Your browser does not support the audio element.
       </audio>
       <img
+        width="3rem"
+        height="2.25rem"
         class="button ml-3 w-12 h-9 p-2 rounded-lg"
         src="/icons/volume_up-white-48dp.svg"
         alt="listen to audio"
@@ -96,6 +98,8 @@
         {{ blok.language }}
       </p>
       <img
+        height="48px"
+        width="48px"
         class=""
         src="/icons/keyboard_arrow_right-black-48dp.svg"
         alt="Select this language"

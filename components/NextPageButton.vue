@@ -24,7 +24,7 @@
       <img
         class="inline"
         :src="
-          this.$store.state.rtl
+          isRtl()
             ? '/icons/keyboard_arrow_right-white-48dp.svg'
             : '/icons/keyboard_arrow_left-white-48dp.svg'
         "
@@ -45,6 +45,10 @@ export default {
   },
 
   computed: {
+    isRtl() {
+      return this.$store.state.rtl
+    },
+
     to() {
       switch (this.getNameOfPage) {
         case 'Principles':
