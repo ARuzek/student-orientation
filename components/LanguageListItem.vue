@@ -87,8 +87,8 @@
         Your browser does not support the audio element.
       </audio>
       <nuxt-img
-        width="auto"
-        height="auto"
+        width="48"
+        height="36"
         class="button ml-3 p-2 rounded-lg"
         src="/icons/volume_up-white-48dp.svg"
         alt="listen to audio"
@@ -98,8 +98,8 @@
         {{ blok.language }}
       </p>
       <nuxt-img
-        height="auto"
-        width="auto"
+        height="36"
+        width="36"
         src="/icons/keyboard_arrow_right-black-48dp.svg"
         alt="Select this language"
       />
