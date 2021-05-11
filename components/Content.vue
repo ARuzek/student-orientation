@@ -28,7 +28,9 @@
         v-if="!$route.path.includes('health')"
         class="p-0 sm:hidden flex flex-row justify-between"
       >
-        <a class="text-xl button disabled h-9 pl-2 pr-6 text-center rounded-lg">
+        <a
+          class="text-xl button invisible h-9 pl-2 pr-6 text-center rounded-lg"
+        >
           <img
             class="inline"
             :src="
