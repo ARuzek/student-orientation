@@ -2,6 +2,8 @@
 
 The goal of this project is to provide an accessible orientation resource for new students arriving at Still I Rise (NGO) international schools and youth centers for refugees. The student orientation is multilingual and incorporates audio and visual cues to aid accessibility. 
 
+Final Capstone Paper: https://docs.google.com/document/d/1I-i05wUcuCNbWWSW4J5iT8vDOG6EOQdr9N25XXEb_ZE/edit?usp=sharing
+
 Promo Video: https://www.youtube.com/watch?v=Gz8OwhkjCcM
 
 Student Presentation Video: https://www.youtube.com/watch?v=Y9aAOufi1FI
